@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49117866171BFBBE00A830C4 /* Diagrama_rede_Metro.png in Resources */ = {isa = PBXBuildFile; fileRef = 49117865171BFBBE00A830C4 /* Diagrama_rede_Metro.png */; };
 		49166CB1161F39BF0033EF9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49166CB0161F39BF0033EF9A /* UIKit.framework */; };
 		49166CB3161F39BF0033EF9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49166CB2161F39BF0033EF9A /* Foundation.framework */; };
 		49166CB5161F39BF0033EF9A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49166CB4161F39BF0033EF9A /* CoreGraphics.framework */; };
@@ -18,9 +19,23 @@
 		49166CC7161F39C00033EF9A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49166CC6161F39C00033EF9A /* Default-568h@2x.png */; };
 		49166CCA161F39C00033EF9A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49166CC8161F39C00033EF9A /* MainStoryboard.storyboard */; };
 		49166CCD161F39C00033EF9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49166CCC161F39C00033EF9A /* ViewController.m */; };
+		49403A051620C5B200783CCC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49403A041620C5B200783CCC /* iAd.framework */; };
+		4959D1A11621503500330D60 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4959D1A01621503500330D60 /* libFlurry.a */; };
+		4959D1A91621611000330D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4959D1A81621611000330D60 /* SystemConfiguration.framework */; };
+		496968261651DAE800F1B8FC /* AdNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496968251651DAE800F1B8FC /* AdNavController.m */; };
+		4969682A1651E11900F1B8FC /* LineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496968291651E11900F1B8FC /* LineInfoViewController.m */; };
+		496968351652893500F1B8FC /* SubwayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 496968341652893500F1B8FC /* SubwayModel.m */; };
+		4998BCC7177F8FBD00D02A0A /* subway.png in Resources */ = {isa = PBXBuildFile; fileRef = 4998BCC6177F8FBD00D02A0A /* subway.png */; };
+		49BC5C4B1652FF6F00CD828B /* bticon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BC5C481652FF6F00CD828B /* bticon-57.png */; };
+		49BC5C4C1652FF6F00CD828B /* bticon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BC5C491652FF6F00CD828B /* bticon-72.png */; };
+		49BC5C4D1652FF6F00CD828B /* bticon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BC5C4A1652FF6F00CD828B /* bticon-114.png */; };
+		49D2A5CC1652A29000971510 /* Stop.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D2A5CB1652A29000971510 /* Stop.m */; };
+		49D2A5D01652A7C100971510 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D2A5CF1652A7C100971510 /* Trip.m */; };
+		49E595C0164AC2F600862708 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E595BF164AC2F600862708 /* ScheduleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49117865171BFBBE00A830C4 /* Diagrama_rede_Metro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Diagrama_rede_Metro.png; path = ../../../../Desktop/Diagrama_rede_Metro.png; sourceTree = "<group>"; };
 		49166CAC161F39BF0033EF9A /* BostonTMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostonTMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49166CB0161F39BF0033EF9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49166CB2161F39BF0033EF9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +52,26 @@
 		49166CC9161F39C00033EF9A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		49166CCB161F39C00033EF9A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		49166CCC161F39C00033EF9A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		49403A041620C5B200783CCC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		4959D19F1621503500330D60 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		4959D1A01621503500330D60 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		4959D1A81621611000330D60 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		496968241651DAE800F1B8FC /* AdNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdNavController.h; sourceTree = "<group>"; };
+		496968251651DAE800F1B8FC /* AdNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdNavController.m; sourceTree = "<group>"; };
+		496968281651E11900F1B8FC /* LineInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineInfoViewController.h; sourceTree = "<group>"; };
+		496968291651E11900F1B8FC /* LineInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineInfoViewController.m; sourceTree = "<group>"; };
+		496968331652893400F1B8FC /* SubwayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubwayModel.h; sourceTree = "<group>"; };
+		496968341652893500F1B8FC /* SubwayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubwayModel.m; sourceTree = "<group>"; };
+		4998BCC6177F8FBD00D02A0A /* subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subway.png; path = BostonTMap/subway.png; sourceTree = "<group>"; };
+		49BC5C481652FF6F00CD828B /* bticon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bticon-57.png"; sourceTree = "<group>"; };
+		49BC5C491652FF6F00CD828B /* bticon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bticon-72.png"; sourceTree = "<group>"; };
+		49BC5C4A1652FF6F00CD828B /* bticon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bticon-114.png"; sourceTree = "<group>"; };
+		49D2A5CA1652A29000971510 /* Stop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stop.h; sourceTree = "<group>"; };
+		49D2A5CB1652A29000971510 /* Stop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stop.m; sourceTree = "<group>"; };
+		49D2A5CE1652A7C100971510 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		49D2A5CF1652A7C100971510 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		49E595BE164AC2F500862708 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		49E595BF164AC2F600862708 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +79,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4959D1A91621611000330D60 /* SystemConfiguration.framework in Frameworks */,
+				49403A051620C5B200783CCC /* iAd.framework in Frameworks */,
 				49166CB1161F39BF0033EF9A /* UIKit.framework in Frameworks */,
 				49166CB3161F39BF0033EF9A /* Foundation.framework in Frameworks */,
 				49166CB5161F39BF0033EF9A /* CoreGraphics.framework in Frameworks */,
+				4959D1A11621503500330D60 /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +94,7 @@
 		49166CA1161F39BF0033EF9A = {
 			isa = PBXGroup;
 			children = (
+				4998BCC6177F8FBD00D02A0A /* subway.png */,
 				49166CB6161F39BF0033EF9A /* BostonTMap */,
 				49166CAF161F39BF0033EF9A /* Frameworks */,
 				49166CAD161F39BF0033EF9A /* Products */,
@@ -73,6 +112,8 @@
 		49166CAF161F39BF0033EF9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49403A041620C5B200783CCC /* iAd.framework */,
+				4959D1A81621611000330D60 /* SystemConfiguration.framework */,
 				49166CB0161F39BF0033EF9A /* UIKit.framework */,
 				49166CB2161F39BF0033EF9A /* Foundation.framework */,
 				49166CB4161F39BF0033EF9A /* CoreGraphics.framework */,
@@ -83,12 +124,29 @@
 		49166CB6161F39BF0033EF9A /* BostonTMap */ = {
 			isa = PBXGroup;
 			children = (
+				49BC5C481652FF6F00CD828B /* bticon-57.png */,
+				49BC5C491652FF6F00CD828B /* bticon-72.png */,
+				49BC5C4A1652FF6F00CD828B /* bticon-114.png */,
+				496968241651DAE800F1B8FC /* AdNavController.h */,
+				496968251651DAE800F1B8FC /* AdNavController.m */,
+				4959D19E1621503500330D60 /* Flurry */,
 				49166CBF161F39C00033EF9A /* AppDelegate.h */,
 				49166CC0161F39C00033EF9A /* AppDelegate.m */,
 				49166CC8161F39C00033EF9A /* MainStoryboard.storyboard */,
+				49117865171BFBBE00A830C4 /* Diagrama_rede_Metro.png */,
 				49166CCB161F39C00033EF9A /* ViewController.h */,
 				49166CCC161F39C00033EF9A /* ViewController.m */,
 				49166CB7161F39BF0033EF9A /* Supporting Files */,
+				49E595BE164AC2F500862708 /* ScheduleViewController.h */,
+				49E595BF164AC2F600862708 /* ScheduleViewController.m */,
+				496968281651E11900F1B8FC /* LineInfoViewController.h */,
+				496968291651E11900F1B8FC /* LineInfoViewController.m */,
+				496968331652893400F1B8FC /* SubwayModel.h */,
+				496968341652893500F1B8FC /* SubwayModel.m */,
+				49D2A5CA1652A29000971510 /* Stop.h */,
+				49D2A5CB1652A29000971510 /* Stop.m */,
+				49D2A5CE1652A7C100971510 /* Trip.h */,
+				49D2A5CF1652A7C100971510 /* Trip.m */,
 			);
 			path = BostonTMap;
 			sourceTree = "<group>";
@@ -105,6 +163,15 @@
 				49166CC6161F39C00033EF9A /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4959D19E1621503500330D60 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				4959D19F1621503500330D60 /* Flurry.h */,
+				4959D1A01621503500330D60 /* libFlurry.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +229,11 @@
 				49166CC5161F39C00033EF9A /* Default@2x.png in Resources */,
 				49166CC7161F39C00033EF9A /* Default-568h@2x.png in Resources */,
 				49166CCA161F39C00033EF9A /* MainStoryboard.storyboard in Resources */,
+				49BC5C4B1652FF6F00CD828B /* bticon-57.png in Resources */,
+				49BC5C4C1652FF6F00CD828B /* bticon-72.png in Resources */,
+				49BC5C4D1652FF6F00CD828B /* bticon-114.png in Resources */,
+				49117866171BFBBE00A830C4 /* Diagrama_rede_Metro.png in Resources */,
+				4998BCC7177F8FBD00D02A0A /* subway.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +247,12 @@
 				49166CBD161F39C00033EF9A /* main.m in Sources */,
 				49166CC1161F39C00033EF9A /* AppDelegate.m in Sources */,
 				49166CCD161F39C00033EF9A /* ViewController.m in Sources */,
+				49E595C0164AC2F600862708 /* ScheduleViewController.m in Sources */,
+				496968261651DAE800F1B8FC /* AdNavController.m in Sources */,
+				4969682A1651E11900F1B8FC /* LineInfoViewController.m in Sources */,
+				496968351652893500F1B8FC /* SubwayModel.m in Sources */,
+				49D2A5CC1652A29000971510 /* Stop.m in Sources */,
+				49D2A5D01652A7C100971510 /* Trip.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +300,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -242,7 +320,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -252,10 +330,19 @@
 		49166CD1161F39C00033EF9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Todd Schrock";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Todd Schrock";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BostonTMap/BostonTMap-Prefix.pch";
 				INFOPLIST_FILE = "BostonTMap/BostonTMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BostonTMap/Flurry\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25CA1A57-7BBA-48C7-9CE6-742DF279DA46";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "25CA1A57-7BBA-48C7-9CE6-742DF279DA46";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -263,10 +350,19 @@
 		49166CD2161F39C00033EF9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Todd Schrock";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Todd Schrock";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BostonTMap/BostonTMap-Prefix.pch";
 				INFOPLIST_FILE = "BostonTMap/BostonTMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BostonTMap/Flurry\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25CA1A57-7BBA-48C7-9CE6-742DF279DA46";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "25CA1A57-7BBA-48C7-9CE6-742DF279DA46";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -290,6 +386,7 @@
 				49166CD2161F39C00033EF9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

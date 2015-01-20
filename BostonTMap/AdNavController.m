@@ -1,20 +1,29 @@
 //
-//  ViewController.m
-//  BostonTMap
+//  QEAdNavController.m
+//  QE
 //
-//  Created by Ellidi Jatgeirsson on 10/5/12.
-//
+//  Created by Ellidi Jatgeirsson on 9/23/12.
+//  Copyright (c) 2012 QE. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "AdNavController.h"
 
-@interface ViewController () <UIScrollViewDelegate, ADBannerViewDelegate>
+@interface AdNavController () <ADBannerViewDelegate>
 
 @end
 
-@implementation ViewController
-@synthesize subwayImageView = _subwayImageView;
-@synthesize subwayScrollView = _subwayScrollView;
+@implementation AdNavController
+@synthesize adView = _adView;
+@synthesize bannerIsVisible = _bannerIsVisible;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -26,23 +35,7 @@
     self.adView.delegate=self;
     self.bannerIsVisible=NO;
     [super viewDidLoad];
-}
-
--(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
-{
-    return self.subwayImageView;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-- (void)viewDidUnload {
-    [self setSubwayImageView:nil];
-    [self setSubwayScrollView:nil];
-    [self setSchedulesButton:nil];
-    [super viewDidUnload];
+	// Do any additional setup after loading the view.
 }
 
 #pragma mark - iAd delegate
@@ -53,8 +46,7 @@
     {
         [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
         // banner is invisible now and moved out of the screen on 50 px
-        banner.frame = CGRectOffset(banner.frame, 0, 50);
-        self.schedulesButton.frame = CGRectOffset(self.schedulesButton.frame, 0, 50);
+        banner.frame = CGRectOffset(banner.frame, 0, 114);
         [UIView commitAnimations];
         self.bannerIsVisible = YES;
     }
@@ -66,10 +58,21 @@
     {
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
         // banner is visible and we move it out of the screen, due to connection issue
-        banner.frame = CGRectOffset(banner.frame, 0, -50);
-        self.schedulesButton.frame = CGRectOffset(self.schedulesButton.frame, 0, -50);
+        banner.frame = CGRectOffset(banner.frame, 0, -114);
         [UIView commitAnimations];
         self.bannerIsVisible = NO;
     }
 }
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
 @end
