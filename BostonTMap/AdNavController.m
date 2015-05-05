@@ -7,67 +7,61 @@
 //
 
 #import "AdNavController.h"
+#import <MoPub/MPAdView.h>
 
-@interface AdNavController () <ADBannerViewDelegate>
-
+@interface AdNavController ()  <MPAdViewDelegate>
+@property (nonatomic, retain) MPAdView *adView;
+@property BOOL bannerIsVisible;
 @end
 
-@implementation AdNavController
-@synthesize adView = _adView;
-@synthesize bannerIsVisible = _bannerIsVisible;
+static float const AnimationDuration = .1;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@implementation AdNavController
 
 - (void)viewDidLoad
 {
-    self.adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    self.adView.frame = CGRectOffset(self.adView.frame, 0, -50);
-    self.adView.requiredContentSizeIdentifiers = [NSSet setWithObject:ADBannerContentSizeIdentifierPortrait];
-    self.adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-    [self.view addSubview:self.adView];
-    self.adView.delegate=self;
-    self.bannerIsVisible=NO;
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // TODO: Replace this test id with your personal ad unit id
+    MPAdView* adView = [[MPAdView alloc] initWithAdUnitId:@"f34387b7990b4d85976abf940b2ad454"
+                                                     size:MOPUB_BANNER_SIZE];
+    self.adView = adView;
+    self.adView.delegate = self;
+    self.adView.frame = CGRectMake(0, - MOPUB_BANNER_SIZE.height,
+                                   MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
+    [self.view addSubview:self.adView];
+    [self.adView loadAd];
+    self.bannerIsVisible=NO;
 }
 
-#pragma mark - iAd delegate
+#pragma mark - <MPAdViewDelegate>
 
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+- (UIViewController *)viewControllerForPresentingModalView {
+    return self;
+}
+
+- (void)adViewDidLoadAd:(MPAdView *)banner
 {
-    if (!self.bannerIsVisible)
-    {
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        // banner is invisible now and moved out of the screen on 50 px
-        banner.frame = CGRectOffset(banner.frame, 0, 114);
-        [UIView commitAnimations];
+    if (!self.bannerIsVisible){
+        [UIView animateWithDuration:AnimationDuration animations:^{
+            banner.frame = CGRectOffset(banner.frame, 0, MOPUB_BANNER_SIZE.height
+                                        + self.navigationBar.bounds.size.height
+                                        + [UIApplication sharedApplication].statusBarFrame.size.height);
+        }];
         self.bannerIsVisible = YES;
     }
 }
 
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+- (void)adViewDidFailToLoadAd:(MPAdView *)banner
 {
-    if (self.bannerIsVisible)
-    {
-        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
-        // banner is visible and we move it out of the screen, due to connection issue
-        banner.frame = CGRectOffset(banner.frame, 0, -114);
-        [UIView commitAnimations];
+    if (self.bannerIsVisible){
+        [UIView animateWithDuration:AnimationDuration animations:^{
+            // banner is visible and we move it out of the screen, due to connection issue
+            banner.frame = CGRectOffset(banner.frame, 0, -MOPUB_BANNER_SIZE.height
+                                        - self.navigationBar.bounds.size.height
+                                        - [UIApplication sharedApplication].statusBarFrame.size.height);
+        }];
         self.bannerIsVisible = NO;
     }
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

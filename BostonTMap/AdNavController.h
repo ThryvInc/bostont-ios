@@ -11,6 +11,4 @@
 
 @interface AdNavController : UINavigationController
 
-@property ADBannerView *adView;
-@property BOOL bannerIsVisible;
 @end

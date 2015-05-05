@@ -18,21 +18,18 @@
 @end
 
 @implementation LineInfoViewController
-@synthesize stopArray = _stopArray;
-@synthesize redAsh = _redAsh;
-@synthesize redBrain = _redBrain;
-@synthesize line = _line;
-
-@synthesize model = _model;
-
 UIAlertView *loadingAlert;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    self.title = self.model.line;
+    
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 #pragma mark - Table view data source
@@ -42,16 +39,10 @@ UIAlertView *loadingAlert;
     return self.model.trips.count;
 }
 
-- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    NSString *title = [NSString stringWithFormat:@"To %@",((Trip *)[self.model.trips objectAtIndex:section]).destination];
-    return title;
-}
-
-- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel *title = [[UILabel alloc]initWithFrame:CGRectZero];
-    title.text = [NSString stringWithFormat:@"To %@",((Trip *)[self.model.trips objectAtIndex:section]).destination];
+    title.text = [NSString stringWithFormat:@"   To %@",((Trip *)[self.model.trips objectAtIndex:section]).destination];
     UIColor *color;
     if ([self.model.line isEqualToString:@"Red"]) {
         color = [UIColor redColor];
@@ -66,6 +57,11 @@ UIAlertView *loadingAlert;
     title.textColor = [UIColor whiteColor];
     
     return title;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 22;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49117866171BFBBE00A830C4 /* Diagrama_rede_Metro.png in Resources */ = {isa = PBXBuildFile; fileRef = 49117865171BFBBE00A830C4 /* Diagrama_rede_Metro.png */; };
 		49166CB1161F39BF0033EF9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49166CB0161F39BF0033EF9A /* UIKit.framework */; };
 		49166CB3161F39BF0033EF9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49166CB2161F39BF0033EF9A /* Foundation.framework */; };
 		49166CB5161F39BF0033EF9A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49166CB4161F39BF0033EF9A /* CoreGraphics.framework */; };
@@ -20,7 +19,24 @@
 		49166CCA161F39C00033EF9A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49166CC8161F39C00033EF9A /* MainStoryboard.storyboard */; };
 		49166CCD161F39C00033EF9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49166CCC161F39C00033EF9A /* ViewController.m */; };
 		49403A051620C5B200783CCC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49403A041620C5B200783CCC /* iAd.framework */; };
-		4959D1A11621503500330D60 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4959D1A01621503500330D60 /* libFlurry.a */; };
+		494A51171AF8544F00C25B97 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51121AF8544F00C25B97 /* Security.framework */; };
+		494A51181AF8544F00C25B97 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51131AF8544F00C25B97 /* libc++.dylib */; };
+		494A51191AF8544F00C25B97 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51141AF8544F00C25B97 /* libz.dylib */; };
+		494A511A1AF8544F00C25B97 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51151AF8544F00C25B97 /* Fabric.framework */; };
+		494A511B1AF8544F00C25B97 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51161AF8544F00C25B97 /* Crashlytics.framework */; };
+		494A51291AF8550600C25B97 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A511C1AF8550500C25B97 /* AdSupport.framework */; };
+		494A512A1AF8550600C25B97 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A511D1AF8550500C25B97 /* CoreLocation.framework */; };
+		494A512B1AF8550600C25B97 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A511E1AF8550500C25B97 /* CoreTelephony.framework */; };
+		494A512C1AF8550600C25B97 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A511F1AF8550500C25B97 /* EventKit.framework */; };
+		494A512D1AF8550600C25B97 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51201AF8550500C25B97 /* EventKitUI.framework */; };
+		494A512E1AF8550600C25B97 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51211AF8550600C25B97 /* MessageUI.framework */; };
+		494A512F1AF8550600C25B97 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51221AF8550600C25B97 /* MediaPlayer.framework */; };
+		494A51301AF8550600C25B97 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51231AF8550600C25B97 /* PassKit.framework */; };
+		494A51311AF8550600C25B97 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51241AF8550600C25B97 /* QuartzCore.framework */; };
+		494A51321AF8550600C25B97 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51251AF8550600C25B97 /* Social.framework */; };
+		494A51331AF8550600C25B97 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51261AF8550600C25B97 /* StoreKit.framework */; };
+		494A51341AF8550600C25B97 /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51271AF8550600C25B97 /* MoPub.framework */; };
+		494A51351AF8550600C25B97 /* MoPub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 494A51281AF8550600C25B97 /* MoPub.bundle */; };
 		4959D1A91621611000330D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4959D1A81621611000330D60 /* SystemConfiguration.framework */; };
 		496968261651DAE800F1B8FC /* AdNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496968251651DAE800F1B8FC /* AdNavController.m */; };
 		4969682A1651E11900F1B8FC /* LineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496968291651E11900F1B8FC /* LineInfoViewController.m */; };
@@ -29,13 +45,14 @@
 		49BC5C4B1652FF6F00CD828B /* bticon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BC5C481652FF6F00CD828B /* bticon-57.png */; };
 		49BC5C4C1652FF6F00CD828B /* bticon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BC5C491652FF6F00CD828B /* bticon-72.png */; };
 		49BC5C4D1652FF6F00CD828B /* bticon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BC5C4A1652FF6F00CD828B /* bticon-114.png */; };
+		49C6C4891AF8637300C9A0D7 /* bticon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 49C6C4881AF8637300C9A0D7 /* bticon-120.png */; };
 		49D2A5CC1652A29000971510 /* Stop.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D2A5CB1652A29000971510 /* Stop.m */; };
 		49D2A5D01652A7C100971510 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D2A5CF1652A7C100971510 /* Trip.m */; };
 		49E595C0164AC2F600862708 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E595BF164AC2F600862708 /* ScheduleViewController.m */; };
+		64625B9C1AAC4080FBFC9C9E /* libPods-BostonTMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED6A941EC85AD954B70A3C0 /* libPods-BostonTMap.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49117865171BFBBE00A830C4 /* Diagrama_rede_Metro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Diagrama_rede_Metro.png; path = ../../../../Desktop/Diagrama_rede_Metro.png; sourceTree = "<group>"; };
 		49166CAC161F39BF0033EF9A /* BostonTMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostonTMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49166CB0161F39BF0033EF9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49166CB2161F39BF0033EF9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,8 +70,24 @@
 		49166CCB161F39C00033EF9A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		49166CCC161F39C00033EF9A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49403A041620C5B200783CCC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		4959D19F1621503500330D60 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		4959D1A01621503500330D60 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		494A51121AF8544F00C25B97 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		494A51131AF8544F00C25B97 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		494A51141AF8544F00C25B97 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		494A51151AF8544F00C25B97 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		494A51161AF8544F00C25B97 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		494A511C1AF8550500C25B97 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		494A511D1AF8550500C25B97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		494A511E1AF8550500C25B97 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		494A511F1AF8550500C25B97 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		494A51201AF8550500C25B97 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		494A51211AF8550600C25B97 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		494A51221AF8550600C25B97 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		494A51231AF8550600C25B97 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		494A51241AF8550600C25B97 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		494A51251AF8550600C25B97 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		494A51261AF8550600C25B97 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		494A51271AF8550600C25B97 /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = "<group>"; };
+		494A51281AF8550600C25B97 /* MoPub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MoPub.bundle; path = MoPub.framework/Versions/A/Resources/MoPub.bundle; sourceTree = "<group>"; };
 		4959D1A81621611000330D60 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		496968241651DAE800F1B8FC /* AdNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdNavController.h; sourceTree = "<group>"; };
 		496968251651DAE800F1B8FC /* AdNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdNavController.m; sourceTree = "<group>"; };
@@ -66,12 +99,16 @@
 		49BC5C481652FF6F00CD828B /* bticon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bticon-57.png"; sourceTree = "<group>"; };
 		49BC5C491652FF6F00CD828B /* bticon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bticon-72.png"; sourceTree = "<group>"; };
 		49BC5C4A1652FF6F00CD828B /* bticon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bticon-114.png"; sourceTree = "<group>"; };
+		49C6C4881AF8637300C9A0D7 /* bticon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bticon-120.png"; sourceTree = "<group>"; };
 		49D2A5CA1652A29000971510 /* Stop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stop.h; sourceTree = "<group>"; };
 		49D2A5CB1652A29000971510 /* Stop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stop.m; sourceTree = "<group>"; };
 		49D2A5CE1652A7C100971510 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
 		49D2A5CF1652A7C100971510 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
 		49E595BE164AC2F500862708 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		49E595BF164AC2F600862708 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		9ED6A941EC85AD954B70A3C0 /* libPods-BostonTMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BostonTMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA649069EC819D5B5FE3232F /* Pods-BostonTMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap.debug.xcconfig"; sourceTree = "<group>"; };
+		F9DDC865652C0451BDFB3938 /* Pods-BostonTMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +116,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494A51341AF8550600C25B97 /* MoPub.framework in Frameworks */,
+				494A51311AF8550600C25B97 /* QuartzCore.framework in Frameworks */,
 				4959D1A91621611000330D60 /* SystemConfiguration.framework in Frameworks */,
+				494A512C1AF8550600C25B97 /* EventKit.framework in Frameworks */,
+				494A512E1AF8550600C25B97 /* MessageUI.framework in Frameworks */,
+				494A511A1AF8544F00C25B97 /* Fabric.framework in Frameworks */,
+				494A512B1AF8550600C25B97 /* CoreTelephony.framework in Frameworks */,
+				494A512A1AF8550600C25B97 /* CoreLocation.framework in Frameworks */,
 				49403A051620C5B200783CCC /* iAd.framework in Frameworks */,
 				49166CB1161F39BF0033EF9A /* UIKit.framework in Frameworks */,
+				494A51321AF8550600C25B97 /* Social.framework in Frameworks */,
 				49166CB3161F39BF0033EF9A /* Foundation.framework in Frameworks */,
+				494A512D1AF8550600C25B97 /* EventKitUI.framework in Frameworks */,
+				494A51291AF8550600C25B97 /* AdSupport.framework in Frameworks */,
+				494A51171AF8544F00C25B97 /* Security.framework in Frameworks */,
+				494A51191AF8544F00C25B97 /* libz.dylib in Frameworks */,
 				49166CB5161F39BF0033EF9A /* CoreGraphics.framework in Frameworks */,
-				4959D1A11621503500330D60 /* libFlurry.a in Frameworks */,
+				494A51301AF8550600C25B97 /* PassKit.framework in Frameworks */,
+				494A51181AF8544F00C25B97 /* libc++.dylib in Frameworks */,
+				64625B9C1AAC4080FBFC9C9E /* libPods-BostonTMap.a in Frameworks */,
+				494A512F1AF8550600C25B97 /* MediaPlayer.framework in Frameworks */,
+				494A511B1AF8544F00C25B97 /* Crashlytics.framework in Frameworks */,
+				494A51331AF8550600C25B97 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +152,7 @@
 				49166CB6161F39BF0033EF9A /* BostonTMap */,
 				49166CAF161F39BF0033EF9A /* Frameworks */,
 				49166CAD161F39BF0033EF9A /* Products */,
+				4D878024EAED68B283623642 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,11 +167,30 @@
 		49166CAF161F39BF0033EF9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				494A511C1AF8550500C25B97 /* AdSupport.framework */,
+				494A511D1AF8550500C25B97 /* CoreLocation.framework */,
+				494A511E1AF8550500C25B97 /* CoreTelephony.framework */,
+				494A511F1AF8550500C25B97 /* EventKit.framework */,
+				494A51201AF8550500C25B97 /* EventKitUI.framework */,
+				494A51211AF8550600C25B97 /* MessageUI.framework */,
+				494A51221AF8550600C25B97 /* MediaPlayer.framework */,
+				494A51231AF8550600C25B97 /* PassKit.framework */,
+				494A51241AF8550600C25B97 /* QuartzCore.framework */,
+				494A51251AF8550600C25B97 /* Social.framework */,
+				494A51261AF8550600C25B97 /* StoreKit.framework */,
+				494A51271AF8550600C25B97 /* MoPub.framework */,
+				494A51281AF8550600C25B97 /* MoPub.bundle */,
+				494A51121AF8544F00C25B97 /* Security.framework */,
+				494A51131AF8544F00C25B97 /* libc++.dylib */,
+				494A51141AF8544F00C25B97 /* libz.dylib */,
+				494A51151AF8544F00C25B97 /* Fabric.framework */,
+				494A51161AF8544F00C25B97 /* Crashlytics.framework */,
 				49403A041620C5B200783CCC /* iAd.framework */,
 				4959D1A81621611000330D60 /* SystemConfiguration.framework */,
 				49166CB0161F39BF0033EF9A /* UIKit.framework */,
 				49166CB2161F39BF0033EF9A /* Foundation.framework */,
 				49166CB4161F39BF0033EF9A /* CoreGraphics.framework */,
+				9ED6A941EC85AD954B70A3C0 /* libPods-BostonTMap.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,16 +198,15 @@
 		49166CB6161F39BF0033EF9A /* BostonTMap */ = {
 			isa = PBXGroup;
 			children = (
+				49C6C4881AF8637300C9A0D7 /* bticon-120.png */,
 				49BC5C481652FF6F00CD828B /* bticon-57.png */,
 				49BC5C491652FF6F00CD828B /* bticon-72.png */,
 				49BC5C4A1652FF6F00CD828B /* bticon-114.png */,
 				496968241651DAE800F1B8FC /* AdNavController.h */,
 				496968251651DAE800F1B8FC /* AdNavController.m */,
-				4959D19E1621503500330D60 /* Flurry */,
 				49166CBF161F39C00033EF9A /* AppDelegate.h */,
 				49166CC0161F39C00033EF9A /* AppDelegate.m */,
 				49166CC8161F39C00033EF9A /* MainStoryboard.storyboard */,
-				49117865171BFBBE00A830C4 /* Diagrama_rede_Metro.png */,
 				49166CCB161F39C00033EF9A /* ViewController.h */,
 				49166CCC161F39C00033EF9A /* ViewController.m */,
 				49166CB7161F39BF0033EF9A /* Supporting Files */,
@@ -165,13 +238,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4959D19E1621503500330D60 /* Flurry */ = {
+		4D878024EAED68B283623642 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4959D19F1621503500330D60 /* Flurry.h */,
-				4959D1A01621503500330D60 /* libFlurry.a */,
+				EA649069EC819D5B5FE3232F /* Pods-BostonTMap.debug.xcconfig */,
+				F9DDC865652C0451BDFB3938 /* Pods-BostonTMap.release.xcconfig */,
 			);
-			path = Flurry;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49166CD0161F39C00033EF9A /* Build configuration list for PBXNativeTarget "BostonTMap" */;
 			buildPhases = (
+				DF7B3DEB167AFFE5A5D17D3D /* Check Pods Manifest.lock */,
 				49166CA8161F39BF0033EF9A /* Sources */,
 				49166CA9161F39BF0033EF9A /* Frameworks */,
 				49166CAA161F39BF0033EF9A /* Resources */,
+				02B6B9108FEBC5F6F38D17E9 /* Copy Pods Resources */,
+				494A51111AF8542500C25B97 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -231,13 +307,60 @@
 				49166CCA161F39C00033EF9A /* MainStoryboard.storyboard in Resources */,
 				49BC5C4B1652FF6F00CD828B /* bticon-57.png in Resources */,
 				49BC5C4C1652FF6F00CD828B /* bticon-72.png in Resources */,
+				494A51351AF8550600C25B97 /* MoPub.bundle in Resources */,
+				49C6C4891AF8637300C9A0D7 /* bticon-120.png in Resources */,
 				49BC5C4D1652FF6F00CD828B /* bticon-114.png in Resources */,
-				49117866171BFBBE00A830C4 /* Diagrama_rede_Metro.png in Resources */,
 				4998BCC7177F8FBD00D02A0A /* subway.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02B6B9108FEBC5F6F38D17E9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		494A51111AF8542500C25B97 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run b1bc39c835159dcffd9f2950a40007e570069713 dde132f14bcd45d54cbbb551f59876744bc3ab28f3e393f236602a2354a4994a";
+		};
+		DF7B3DEB167AFFE5A5D17D3D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49166CA8161F39BF0033EF9A /* Sources */ = {
@@ -329,40 +452,50 @@
 		};
 		49166CD1161F39C00033EF9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA649069EC819D5B5FE3232F /* Pods-BostonTMap.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Todd Schrock";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Todd Schrock";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BostonTMap/BostonTMap-Prefix.pch";
 				INFOPLIST_FILE = "BostonTMap/BostonTMap-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/BostonTMap/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25CA1A57-7BBA-48C7-9CE6-742DF279DA46";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "25CA1A57-7BBA-48C7-9CE6-742DF279DA46";
+				PROVISIONING_PROFILE = "32f00c8d-0c73-4856-80be-e712365e6893";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "32f00c8d-0c73-4856-80be-e712365e6893";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		49166CD2161F39C00033EF9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9DDC865652C0451BDFB3938 /* Pods-BostonTMap.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Todd Schrock";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Todd Schrock";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Todd Elliot Schrock (PE7EQ66NRS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Todd Elliot Schrock (PE7EQ66NRS)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BostonTMap/BostonTMap-Prefix.pch";
 				INFOPLIST_FILE = "BostonTMap/BostonTMap-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/BostonTMap/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25CA1A57-7BBA-48C7-9CE6-742DF279DA46";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "25CA1A57-7BBA-48C7-9CE6-742DF279DA46";
+				PROVISIONING_PROFILE = "fd4f0293-0944-41bf-815d-b2eb7d632a43";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "fd4f0293-0944-41bf-815d-b2eb7d632a43";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

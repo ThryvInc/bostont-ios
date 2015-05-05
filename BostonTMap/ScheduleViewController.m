@@ -84,7 +84,6 @@
             NSLog(@"error:\n%@", error.debugDescription);
         }
     });
-    dispatch_release(queue);
 }
 
 - (IBAction)greenInfo
