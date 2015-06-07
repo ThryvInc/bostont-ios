@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
+            <connections>
+                <outlet property="schedulesButton" destination="BHw-gb-ghW" id="1az-rs-Scj"/>
+                <outlet property="schedulesButtonTopConstraint" destination="XY2-Jm-afs" id="MKq-Y0-7OX"/>
+                <outlet property="subwayImageView" destination="BvJ-kK-aOF" id="5Sj-NH-2QT"/>
+                <outlet property="subwayScrollView" destination="fCp-Xg-P7v" id="0sP-uw-5AO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" bounces="NO" maximumZoomScale="15" translatesAutoresizingMaskIntoConstraints="NO" id="fCp-Xg-P7v">
+                    <rect key="frame" x="0.0" y="100" width="600" height="500"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="subway.png" translatesAutoresizingMaskIntoConstraints="NO" id="BvJ-kK-aOF">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="BvJ-kK-aOF" firstAttribute="leading" secondItem="fCp-Xg-P7v" secondAttribute="leading" id="4jO-dc-ndT"/>
+                        <constraint firstAttribute="centerY" secondItem="BvJ-kK-aOF" secondAttribute="centerY" id="8PF-bO-JMW"/>
+                        <constraint firstAttribute="centerX" secondItem="BvJ-kK-aOF" secondAttribute="centerX" id="8dn-S6-AQX"/>
+                        <constraint firstAttribute="trailing" secondItem="BvJ-kK-aOF" secondAttribute="trailing" id="A7l-mm-chk"/>
+                        <constraint firstItem="BvJ-kK-aOF" firstAttribute="top" secondItem="fCp-Xg-P7v" secondAttribute="top" id="rRn-eQ-Y2r"/>
+                        <constraint firstAttribute="bottom" secondItem="BvJ-kK-aOF" secondAttribute="bottom" id="yfu-EC-S2g"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Ixx-6f-Dqp"/>
+                    </connections>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHw-gb-ghW">
+                    <rect key="frame" x="0.0" y="22" width="600" height="40"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="7zv-cz-ifB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Schedules &gt;">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="schedulesPressed" destination="-1" eventType="touchUpInside" id="JiN-e9-HMU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fCp-Xg-P7v" secondAttribute="bottom" id="1Lw-GR-I5w"/>
+                <constraint firstItem="fCp-Xg-P7v" firstAttribute="leading" secondItem="BHw-gb-ghW" secondAttribute="leading" id="8wf-Tp-coT"/>
+                <constraint firstAttribute="trailing" secondItem="fCp-Xg-P7v" secondAttribute="trailing" id="ABM-pU-C1G"/>
+                <constraint firstItem="fCp-Xg-P7v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="QOX-0R-eXu"/>
+                <constraint firstItem="BHw-gb-ghW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="XY2-Jm-afs"/>
+                <constraint firstItem="BHw-gb-ghW" firstAttribute="trailing" secondItem="fCp-Xg-P7v" secondAttribute="trailing" id="aoL-eq-Wwj"/>
+                <constraint firstItem="fCp-Xg-P7v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iRD-eE-w6e"/>
+                <constraint firstItem="BHw-gb-ghW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jo6-gx-959"/>
+                <constraint firstAttribute="trailing" secondItem="BHw-gb-ghW" secondAttribute="trailing" id="lMI-eu-Tfh"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="subway.png" width="2000" height="2000"/>
+    </resources>
+</document>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Results</key>
+	<array>
+		<dict>
+			<key>Provider Name</key>
+			<string>BostonTMap</string>
+			<key>Testable Name</key>
+			<string>BostonTMapTests</string>
+			<key>Testable Tests</key>
+			<array>
+				<dict>
+					<key>Test Identifier</key>
+					<string>LineSpecSpec/test_Line__gets_scheduled_stops_for_single_route</string>
+					<key>Test Name</key>
+					<string>test_Line__gets_scheduled_stops_for_single_route</string>
+					<key>Test Result</key>
+					<string>Succeeded</string>
+				</dict>
+				<dict>
+					<key>Test Identifier</key>
+					<string>LineSpecSpec/test_Line__gets_scheduled_stops_for_multiple_routes</string>
+					<key>Test Name</key>
+					<string>test_Line__gets_scheduled_stops_for_multiple_routes</string>
+					<key>Test Result</key>
+					<string>Failed</string>
+				</dict>
+				<dict>
+					<key>Test Identifier</key>
+					<string>MBTAPredictionObjectSpecSpec/test_The_Prediction_Object__can_be_created_from_json</string>
+					<key>Test Name</key>
+					<string>test_The_Prediction_Object__can_be_created_from_json</string>
+					<key>Test Result</key>
+					<string>Succeeded</string>
+				</dict>
+				<dict>
+					<key>Test Identifier</key>
+					<string>MBTAPredictionObjectSpecSpec/test_The_Prediction_Object__can_get_prediction_from_dep_time</string>
+					<key>Test Name</key>
+					<string>test_The_Prediction_Object__can_get_prediction_from_dep_time</string>
+					<key>Test Result</key>
+					<string>Succeeded</string>
+				</dict>
+				<dict>
+					<key>Test Identifier</key>
+					<string>SchedulesByRouteCallSpecSpec/test_Executing_a_call__gets_schedule_data</string>
+					<key>Test Name</key>
+					<string>test_Executing_a_call__gets_schedule_data</string>
+					<key>Test Result</key>
+					<string>Succeeded</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>Version</key>
+	<string>1.0</string>
+</dict>
+</plist>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7702"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoutesTimesView">
+            <connections>
+                <outlet property="fifthConstraint" destination="eEM-Gs-ovW" id="H4v-ni-1Uh"/>
+                <outlet property="fifthRoute" destination="LJV-YR-Dj1" id="2Hv-6L-Fb3"/>
+                <outlet property="firstRoute" destination="8ia-4y-YZ5" id="Hcl-24-OpP"/>
+                <outlet property="fourthConstraint" destination="fNY-nK-hXc" id="XTi-GW-AtC"/>
+                <outlet property="fourthRoute" destination="5S0-7v-A6j" id="SRP-qJ-WAM"/>
+                <outlet property="secondConstraint" destination="nos-4r-fno" id="6Jl-vx-eBX"/>
+                <outlet property="secondRoute" destination="tNs-dz-cdo" id="si0-ro-Vpj"/>
+                <outlet property="sixthConstraint" destination="Y0c-hp-OCF" id="YEo-T9-OFm"/>
+                <outlet property="sixthRoute" destination="gmk-X0-yuP" id="E0G-2O-590"/>
+                <outlet property="thirdConstraint" destination="XCG-US-Kro" id="025-ii-gg5"/>
+                <outlet property="thirdRoute" destination="FU3-SW-wFy" id="bjd-k3-lVD"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Rd4-Qb-eeY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-4y-YZ5" customClass="RouteTimesView">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="12"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="wCS-GI-2QY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNs-dz-cdo" customClass="RouteTimesView">
+                    <rect key="frame" x="0.0" y="14" width="140" height="12"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="Hf9-GH-RmK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FU3-SW-wFy" customClass="RouteTimesView">
+                    <rect key="frame" x="0.0" y="28" width="140" height="12"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="o5b-6e-gDE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5S0-7v-A6j" customClass="RouteTimesView">
+                    <rect key="frame" x="0.0" y="42" width="140" height="12"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="gfX-r7-AQK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJV-YR-Dj1" customClass="RouteTimesView">
+                    <rect key="frame" x="0.0" y="56" width="140" height="12"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="XPY-ZJ-QrG"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmk-X0-yuP" customClass="RouteTimesView">
+                    <rect key="frame" x="0.0" y="70" width="140" height="12"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="FJo-aK-ad7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5S0-7v-A6j" secondAttribute="trailing" id="2tD-0V-jxl"/>
+                <constraint firstItem="tNs-dz-cdo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9cf-S6-FDN"/>
+                <constraint firstAttribute="trailing" secondItem="FU3-SW-wFy" secondAttribute="trailing" id="AMD-Vr-qNb"/>
+                <constraint firstItem="5S0-7v-A6j" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FD0-zz-DGU"/>
+                <constraint firstAttribute="bottom" secondItem="gmk-X0-yuP" secondAttribute="bottom" id="GGp-MO-rFL"/>
+                <constraint firstAttribute="trailing" secondItem="tNs-dz-cdo" secondAttribute="trailing" id="LB6-lQ-ahP"/>
+                <constraint firstAttribute="trailing" secondItem="LJV-YR-Dj1" secondAttribute="trailing" id="RO6-mW-YYQ"/>
+                <constraint firstItem="8ia-4y-YZ5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TMK-3t-IuP"/>
+                <constraint firstItem="FU3-SW-wFy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TdY-iy-meJ"/>
+                <constraint firstAttribute="trailing" secondItem="gmk-X0-yuP" secondAttribute="trailing" id="WQ0-L6-pdk"/>
+                <constraint firstItem="FU3-SW-wFy" firstAttribute="top" secondItem="tNs-dz-cdo" secondAttribute="bottom" constant="2" id="XCG-US-Kro"/>
+                <constraint firstItem="gmk-X0-yuP" firstAttribute="top" secondItem="LJV-YR-Dj1" secondAttribute="bottom" constant="2" id="Y0c-hp-OCF"/>
+                <constraint firstItem="LJV-YR-Dj1" firstAttribute="top" secondItem="5S0-7v-A6j" secondAttribute="bottom" constant="2" id="eEM-Gs-ovW"/>
+                <constraint firstItem="5S0-7v-A6j" firstAttribute="top" secondItem="FU3-SW-wFy" secondAttribute="bottom" constant="2" id="fNY-nK-hXc"/>
+                <constraint firstAttribute="trailing" secondItem="8ia-4y-YZ5" secondAttribute="trailing" id="fea-ni-Vj6"/>
+                <constraint firstItem="gmk-X0-yuP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="g62-uk-m64"/>
+                <constraint firstItem="LJV-YR-Dj1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nJJ-gv-Wbc"/>
+                <constraint firstItem="tNs-dz-cdo" firstAttribute="top" secondItem="8ia-4y-YZ5" secondAttribute="bottom" constant="2" id="nos-4r-fno"/>
+                <constraint firstItem="8ia-4y-YZ5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yIb-TM-EIE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="194.5" y="173"/>
+        </view>
+    </objects>
+</document>
