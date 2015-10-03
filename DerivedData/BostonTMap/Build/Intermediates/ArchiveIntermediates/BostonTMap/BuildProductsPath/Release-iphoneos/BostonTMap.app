@@ -1,1 +1,0 @@
-/Users/ell/development/ios/apps/bostont-ios/DerivedData/BostonTMap/Build/Intermediates/ArchiveIntermediates/BostonTMap/InstallationBuildProductsLocation/Applications/BostonTMap.app
