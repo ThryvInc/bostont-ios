@@ -51,6 +51,12 @@
 	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow participating local venues to engage with you based on your location.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow participating local venues to engage with you based on your location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow participating local venues to engage with you based on your location.</string>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>

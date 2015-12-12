@@ -10,8 +10,10 @@
 #import <MoPub/MPAdView.h>
 #import "AdNavController.h"
 #import "SchedulesViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface MapViewController () <UIScrollViewDelegate, MPAdViewDelegate>
+@interface MapViewController () <UIScrollViewDelegate, MPAdViewDelegate, CLLocationManagerDelegate>
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *schedulesButtonTopConstraint;
 @property (strong, nonatomic) IBOutlet UIImageView *subwayImageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *subwayScrollView;
@@ -89,6 +91,58 @@ static float const AnimationDuration = .1;
             [self.view updateConstraints];
         }];
         self.bannerIsVisible = NO;
+    }
+}
+
+#pragma mark - location manager delegate
+
+- (void)setupLocation
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [self.locationManager requestAlwaysAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if (status == kCLAuthorizationStatusAuthorized || status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
+        [self.locationManager startUpdatingLocation];
+    }
+}
+
+-(void)locationStatus
+{
+    switch (CLLocationManager.authorizationStatus) {
+        case kCLAuthorizationStatusAuthorized:{
+            // ...
+        }
+            break;
+            
+        case kCLAuthorizationStatusNotDetermined:{
+            [self.locationManager requestAlwaysAuthorization];
+        }
+            break;
+            
+        case kCLAuthorizationStatusAuthorizedWhenInUse:
+        case kCLAuthorizationStatusRestricted:
+        case kCLAuthorizationStatusDenied:{
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Background Location Access Disabled" message:@"In order to be notified about adorable kittens near you, please open this app's settings and set location access to 'Always'." preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction *openAction = [UIAlertAction actionWithTitle:@"Open Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                if (&UIApplicationOpenSettingsURLString != NULL) {
+                    NSURL *appSettings = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                    [[UIApplication sharedApplication] openURL:appSettings];
+                }
+            }];
+            [alertController addAction:cancelAction];
+            [alertController addAction:openAction];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
     }
 }
 
