@@ -102,6 +102,10 @@
 		64625B9C1AAC4080FBFC9C9E /* libPods-BostonTMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED6A941EC85AD954B70A3C0 /* libPods-BostonTMap.a */; };
 		B7714D61CEF466FDA366B5C2 /* libPods-BostonTMapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94312ABBDED094D2E2C1D347 /* libPods-BostonTMapTests.a */; };
 		EB3E4D4F1C1CBBA300D2874E /* YextRetap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB747671C1CB71A00651869 /* YextRetap.framework */; };
+		EB537F901C1CFC6900DB918B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB537F8F1C1CFC6900DB918B /* CoreBluetooth.framework */; };
+		EB537F921C1D005000DB918B /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB537F911C1D005000DB918B /* AddressBookUI.framework */; };
+		EB537F941C1D008A00DB918B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB537F931C1D008A00DB918B /* AVFoundation.framework */; };
+		EB537F961C1D012800DB918B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB537F951C1D012800DB918B /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +242,10 @@
 		94312ABBDED094D2E2C1D347 /* libPods-BostonTMapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BostonTMapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED6A941EC85AD954B70A3C0 /* libPods-BostonTMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BostonTMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA649069EC819D5B5FE3232F /* Pods-BostonTMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap.debug.xcconfig"; sourceTree = "<group>"; };
+		EB537F8F1C1CFC6900DB918B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		EB537F911C1D005000DB918B /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		EB537F931C1D008A00DB918B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EB537F951C1D012800DB918B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EBB747671C1CB71A00651869 /* YextRetap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YextRetap.framework; sourceTree = "<group>"; };
 		F9DDC865652C0451BDFB3938 /* Pods-BostonTMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +255,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB537F961C1D012800DB918B /* ImageIO.framework in Frameworks */,
+				EB537F941C1D008A00DB918B /* AVFoundation.framework in Frameworks */,
+				EB537F921C1D005000DB918B /* AddressBookUI.framework in Frameworks */,
+				EB537F901C1CFC6900DB918B /* CoreBluetooth.framework in Frameworks */,
 				EB3E4D4F1C1CBBA300D2874E /* YextRetap.framework in Frameworks */,
 				494A51311AF8550600C25B97 /* QuartzCore.framework in Frameworks */,
 				4959D1A91621611000330D60 /* SystemConfiguration.framework in Frameworks */,
@@ -311,6 +323,10 @@
 		49166CAF161F39BF0033EF9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB537F951C1D012800DB918B /* ImageIO.framework */,
+				EB537F931C1D008A00DB918B /* AVFoundation.framework */,
+				EB537F911C1D005000DB918B /* AddressBookUI.framework */,
+				EB537F8F1C1CFC6900DB918B /* CoreBluetooth.framework */,
 				EBB747671C1CB71A00651869 /* YextRetap.framework */,
 				49C7D9C41B150EC600B76BF0 /* libobjc.A.dylib */,
 				4907CF261B045BB2008343AA /* MoPub.bundle */,
@@ -599,6 +615,9 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				TargetAttributes = {
+					49166CAB161F39BF0033EF9A = {
+						DevelopmentTeam = 2RRTHGSYV6;
+					};
 					49AE5A361B016AC900F17C6F = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 49166CAB161F39BF0033EF9A;
@@ -907,8 +926,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA649069EC819D5B5FE3232F /* Pods-BostonTMap.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -920,8 +939,8 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32f00c8d-0c73-4856-80be-e712365e6893";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "32f00c8d-0c73-4856-80be-e712365e6893";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -931,8 +950,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9DDC865652C0451BDFB3938 /* Pods-BostonTMap.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -943,8 +962,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "421cf995-454d-4ba1-bdb0-d6336140d053";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "421cf995-454d-4ba1-bdb0-d6336140d053";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
