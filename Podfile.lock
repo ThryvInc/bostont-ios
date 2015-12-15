@@ -1,8 +1,6 @@
 PODS:
   - Expecta (1.0.0)
-  - FlurrySDK (6.2.0):
-    - FlurrySDK/FlurrySDK (= 6.2.0)
-  - FlurrySDK/FlurrySDK (6.2.0)
+  - Flurry-iOS-SDK/FlurrySDK (7.3.0)
   - Google-Mobile-Ads-SDK (7.2.2)
   - GPUImage (0.1.6)
   - Mantle (2.0):
@@ -15,7 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Expecta
-  - FlurrySDK
+  - Flurry-iOS-SDK/FlurrySDK
   - Google-Mobile-Ads-SDK (~> 7.0)
   - GPUImage
   - Mantle
@@ -26,7 +24,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  FlurrySDK: 31d058f0f41d71768eb5c5506700557b0a240111
+  Flurry-iOS-SDK: 054befae0fa0244fb000985bfe757d70f87a9f60
   Google-Mobile-Ads-SDK: 9561b27b8dd2ef861ee74b4c1ba77104c4c5414a
   GPUImage: 4675ce4a5370ca92fcea8623b2a08b8f0c51b940
   Mantle: d7c75b6fb789b20f7ae30cd0d09435fe545896ff
