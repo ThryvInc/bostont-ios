@@ -13,6 +13,7 @@
 #import <Fabric/Fabric.h>
 #import <MoPub/MoPub.h>
 #import <Crashlytics/Crashlytics.h>
+#import <YextRetap/YextRetap.h>
 
 @interface AppDelegate ()
 @property (nonatomic, strong) NagController *nagger;
@@ -28,6 +29,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[MapViewController alloc]initWithNibName:@"MapViewController" bundle:nil];
     [self.window makeKeyAndVisible];
+    
+    #ifdef DEBUG
+        [[YextRetap sharedInstance]
+         initializeWithAppId:@"295fa7c17ccc40489a3ca14f1fdade4c"
+         productionMode:NO];
+    #else
+        [[YextRetap sharedInstance]
+         initializeWithAppId:@"295fa7c17ccc40489a3ca14f1fdade4c"
+         productionMode:YES];
+    #endif
     
     return YES;
 }

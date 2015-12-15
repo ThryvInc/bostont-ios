@@ -16,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *subwayImageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *subwayScrollView;
 @property (strong, nonatomic) IBOutlet UIButton *schedulesButton;
+@property (weak, nonatomic) IBOutlet UIView *buttonView;
+@property (weak, nonatomic) IBOutlet UIButton *privacyPolicyButton;
 
 @property BOOL bannerIsVisible;
 @property (nonatomic, retain) MPAdView *adView;
@@ -39,6 +41,10 @@ static float const AnimationDuration = .1;
     [self.view addSubview:self.adView];
     [self.adView loadAd];
     self.bannerIsVisible=NO;
+    
+    [self.subwayImageView addSubview:self.buttonView];
+    [self.subwayImageView bringSubviewToFront:self.buttonView];
+    [self.subwayImageView setUserInteractionEnabled:YES];
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
@@ -90,6 +96,12 @@ static float const AnimationDuration = .1;
         }];
         self.bannerIsVisible = NO;
     }
+}
+
+- (IBAction)policyTapped
+{
+    NSURL *privacyPolicyURL = [NSURL URLWithString:@"https://teschrock.wordpress.com/transit-app-privacy-policy/"];
+    if ([[UIApplication sharedApplication] canOpenURL:privacyPolicyURL]) [[UIApplication sharedApplication] openURL:privacyPolicyURL];
 }
 
 @end
