@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
             <connections>
-                <outlet property="buttonView" destination="mEW-8s-frl" id="yW0-UJ-uug"/>
                 <outlet property="privacyPolicyButton" destination="f1z-VO-Aku" id="vas-5r-5s5"/>
                 <outlet property="schedulesButton" destination="BHw-gb-ghW" id="1az-rs-Scj"/>
                 <outlet property="schedulesButtonTopConstraint" destination="XY2-Jm-afs" id="MKq-Y0-7OX"/>
@@ -22,43 +21,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" bounces="NO" maximumZoomScale="15" translatesAutoresizingMaskIntoConstraints="NO" id="fCp-Xg-P7v">
-                    <rect key="frame" x="0.0" y="100" width="600" height="500"/>
+                    <rect key="frame" x="0.0" y="30" width="600" height="485"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="subway.png" translatesAutoresizingMaskIntoConstraints="NO" id="BvJ-kK-aOF">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="485"/>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEW-8s-frl" userLabel="ButtonView">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1z-VO-Aku">
-                                    <rect key="frame" x="511" y="473" width="89" height="27"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                    <state key="normal" title="privacy policy  ">
-                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="policyTapped" destination="-1" eventType="touchUpInside" id="nQr-cd-7uc"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="f1z-VO-Aku" secondAttribute="trailing" id="P43-Bo-gLz"/>
-                                <constraint firstAttribute="bottom" secondItem="f1z-VO-Aku" secondAttribute="bottom" id="WcR-94-Mjf"/>
-                            </constraints>
-                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="BvJ-kK-aOF" firstAttribute="leading" secondItem="fCp-Xg-P7v" secondAttribute="leading" id="4jO-dc-ndT"/>
-                        <constraint firstAttribute="bottom" secondItem="mEW-8s-frl" secondAttribute="bottom" id="7dd-WO-3Pi"/>
                         <constraint firstAttribute="centerY" secondItem="BvJ-kK-aOF" secondAttribute="centerY" id="8PF-bO-JMW"/>
                         <constraint firstAttribute="centerX" secondItem="BvJ-kK-aOF" secondAttribute="centerX" id="8dn-S6-AQX"/>
                         <constraint firstAttribute="trailing" secondItem="BvJ-kK-aOF" secondAttribute="trailing" id="A7l-mm-chk"/>
-                        <constraint firstAttribute="trailing" secondItem="mEW-8s-frl" secondAttribute="trailing" id="adi-qr-Tqm"/>
-                        <constraint firstItem="mEW-8s-frl" firstAttribute="leading" secondItem="fCp-Xg-P7v" secondAttribute="leading" id="bBl-gi-wCm"/>
-                        <constraint firstItem="mEW-8s-frl" firstAttribute="centerY" secondItem="fCp-Xg-P7v" secondAttribute="centerY" id="mow-Wp-MNq"/>
-                        <constraint firstItem="mEW-8s-frl" firstAttribute="top" secondItem="fCp-Xg-P7v" secondAttribute="top" id="pSk-ZB-0SL"/>
-                        <constraint firstItem="mEW-8s-frl" firstAttribute="centerX" secondItem="fCp-Xg-P7v" secondAttribute="centerX" id="r6B-c7-J3p"/>
                         <constraint firstItem="BvJ-kK-aOF" firstAttribute="top" secondItem="fCp-Xg-P7v" secondAttribute="top" id="rRn-eQ-Y2r"/>
                         <constraint firstAttribute="bottom" secondItem="BvJ-kK-aOF" secondAttribute="bottom" id="yfu-EC-S2g"/>
                     </constraints>
@@ -84,19 +57,35 @@
                         <action selector="schedulesPressed" destination="-1" eventType="touchUpInside" id="JiN-e9-HMU"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1z-VO-Aku">
+                    <rect key="frame" x="521" y="517" width="76" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="3Gx-AW-Mew"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                    <state key="normal" title="privacy policy  ">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="policyTapped" destination="-1" eventType="touchUpInside" id="nQr-cd-7uc"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="fCp-Xg-P7v" secondAttribute="bottom" id="1Lw-GR-I5w"/>
+                <constraint firstAttribute="bottom" secondItem="fCp-Xg-P7v" secondAttribute="bottom" constant="85" id="1Lw-GR-I5w"/>
+                <constraint firstItem="f1z-VO-Aku" firstAttribute="trailing" secondItem="fCp-Xg-P7v" secondAttribute="trailing" constant="-3" id="2FC-pA-ZcO"/>
                 <constraint firstItem="fCp-Xg-P7v" firstAttribute="leading" secondItem="BHw-gb-ghW" secondAttribute="leading" id="8wf-Tp-coT"/>
                 <constraint firstAttribute="trailing" secondItem="fCp-Xg-P7v" secondAttribute="trailing" id="ABM-pU-C1G"/>
-                <constraint firstItem="fCp-Xg-P7v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="QOX-0R-eXu"/>
+                <constraint firstItem="fCp-Xg-P7v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="QOX-0R-eXu"/>
+                <constraint firstItem="f1z-VO-Aku" firstAttribute="top" secondItem="fCp-Xg-P7v" secondAttribute="bottom" constant="2" id="S2j-PR-wcF"/>
                 <constraint firstItem="BHw-gb-ghW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="XY2-Jm-afs"/>
                 <constraint firstItem="BHw-gb-ghW" firstAttribute="trailing" secondItem="fCp-Xg-P7v" secondAttribute="trailing" id="aoL-eq-Wwj"/>
                 <constraint firstItem="fCp-Xg-P7v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iRD-eE-w6e"/>
                 <constraint firstItem="BHw-gb-ghW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jo6-gx-959"/>
                 <constraint firstAttribute="trailing" secondItem="BHw-gb-ghW" secondAttribute="trailing" id="lMI-eu-Tfh"/>
             </constraints>
+            <point key="canvasLocation" x="15" y="25"/>
         </view>
     </objects>
     <resources>

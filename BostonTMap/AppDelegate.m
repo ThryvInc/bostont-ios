@@ -10,6 +10,7 @@
 #import "Flurry.h"
 #import "MapViewController.h"
 #import "NagController.h"
+#import "AdNavController.h"
 #import <Fabric/Fabric.h>
 #import <MoPub/MoPub.h>
 #import <Crashlytics/Crashlytics.h>
@@ -27,7 +28,12 @@
     [Flurry startSession:@"R3N3NS36S2BDR4XR4RFD"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[MapViewController alloc]initWithNibName:@"MapViewController" bundle:nil];
+    
+    MapViewController *mapVC = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    
+    AdNavController *navVC = [[AdNavController alloc] initWithRootViewController:mapVC];
+
+    self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
     
     #ifdef DEBUG

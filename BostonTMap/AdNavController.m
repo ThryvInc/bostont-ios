@@ -31,7 +31,7 @@ static float const AnimationDuration = .1;
                                                      size:MOPUB_BANNER_SIZE];
     self.adView = adView;
     self.adView.delegate = self;
-    self.adView.frame = CGRectMake(0, - MOPUB_BANNER_SIZE.height,
+    self.adView.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height,
                                    MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
     [self.view addSubview:self.adView];
     [self.adView loadAd];
@@ -70,9 +70,8 @@ static float const AnimationDuration = .1;
 {
     if (!self.bannerIsVisible){
         [UIView animateWithDuration:AnimationDuration animations:^{
-            banner.frame = CGRectOffset(banner.frame, 0, MOPUB_BANNER_SIZE.height
-                                        + self.navigationBar.bounds.size.height
-                                        + [UIApplication sharedApplication].statusBarFrame.size.height);
+            banner.frame = CGRectOffset(banner.frame, 0, self.view.frame.size.height - MOPUB_BANNER_SIZE.height
+                                        + self.navigationBar.bounds.size.height);
         }];
         self.bannerIsVisible = YES;
     }
@@ -83,7 +82,7 @@ static float const AnimationDuration = .1;
     if (self.bannerIsVisible){
         [UIView animateWithDuration:AnimationDuration animations:^{
             // banner is visible and we move it out of the screen, due to connection issue
-            banner.frame = CGRectOffset(banner.frame, 0, -MOPUB_BANNER_SIZE.height
+            banner.frame = CGRectOffset(banner.frame, 0,  -self.view.frame.size.height -MOPUB_BANNER_SIZE.height
                                         - self.navigationBar.bounds.size.height
                                         - [UIApplication sharedApplication].statusBarFrame.size.height);
         }];
@@ -166,7 +165,6 @@ static float const AnimationDuration = .1;
     [self.retapTipView dismissWithAnimated:animated];
     self.retapTipView = nil;
 }
-
 
 - (void)retap:(YextRetap *)retap enteredLocation:(YSLocationContext *)context
 {

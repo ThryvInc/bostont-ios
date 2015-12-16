@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchedulesViewController">
@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-Ol-CQv">
-                    <rect key="frame" x="8" y="308" width="288" height="232"/>
+                    <rect key="frame" x="8" y="245" width="288" height="228"/>
                     <color key="backgroundColor" red="0.94901967050000002" green="0.5411764979" blue="0.22745099660000001" alpha="1" colorSpace="deviceRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Orange Line">
@@ -31,7 +31,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAb-qz-2Bh">
-                    <rect key="frame" x="304" y="68" width="288" height="472"/>
+                    <rect key="frame" x="304" y="8" width="288" height="465"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Red Line">
@@ -46,7 +46,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEZ-IU-0Fd">
-                    <rect key="frame" x="8" y="548" width="584" height="44"/>
+                    <rect key="frame" x="8" y="481" width="584" height="44"/>
                     <color key="backgroundColor" red="0.1450980392" green="0.68627450980000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="83u-IZ-tDK"/>
@@ -64,7 +64,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBl-S0-Wdz">
-                    <rect key="frame" x="8" y="68" width="288" height="232"/>
+                    <rect key="frame" x="8" y="8" width="288" height="229"/>
                     <color key="backgroundColor" red="0.19215688110000001" green="0.047058828179999998" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Blue Line">
@@ -88,7 +88,7 @@
                 <constraint firstItem="nAb-qz-2Bh" firstAttribute="leading" secondItem="eJB-Ol-CQv" secondAttribute="trailing" constant="8" id="9DC-NC-8iv"/>
                 <constraint firstItem="eJB-Ol-CQv" firstAttribute="width" secondItem="eBl-S0-Wdz" secondAttribute="width" id="DZI-sQ-F2S"/>
                 <constraint firstItem="nAb-qz-2Bh" firstAttribute="top" secondItem="eBl-S0-Wdz" secondAttribute="top" id="Gso-JZ-kNz"/>
-                <constraint firstItem="eBl-S0-Wdz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="68" id="Luv-1c-Nn0"/>
+                <constraint firstItem="eBl-S0-Wdz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="Luv-1c-Nn0"/>
                 <constraint firstItem="eJB-Ol-CQv" firstAttribute="top" secondItem="eBl-S0-Wdz" secondAttribute="bottom" constant="8" id="Nxi-gx-oJX"/>
                 <constraint firstItem="eBl-S0-Wdz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Wdu-xN-omR"/>
                 <constraint firstItem="nAb-qz-2Bh" firstAttribute="width" secondItem="eBl-S0-Wdz" secondAttribute="width" id="dls-rf-JgN"/>
@@ -96,7 +96,7 @@
                 <constraint firstItem="nAb-qz-2Bh" firstAttribute="leading" secondItem="eBl-S0-Wdz" secondAttribute="trailing" constant="8" id="k1q-uy-ASK"/>
                 <constraint firstItem="UEZ-IU-0Fd" firstAttribute="top" secondItem="eJB-Ol-CQv" secondAttribute="bottom" constant="8" id="pjg-BB-5gI"/>
                 <constraint firstItem="UEZ-IU-0Fd" firstAttribute="leading" secondItem="eBl-S0-Wdz" secondAttribute="leading" id="sYm-TE-GaH"/>
-                <constraint firstAttribute="bottom" secondItem="UEZ-IU-0Fd" secondAttribute="bottom" constant="8" id="wIO-zY-sEk"/>
+                <constraint firstAttribute="bottom" secondItem="UEZ-IU-0Fd" secondAttribute="bottom" constant="75" id="wIO-zY-sEk"/>
                 <constraint firstAttribute="trailing" secondItem="UEZ-IU-0Fd" secondAttribute="trailing" constant="8" id="yoM-yY-HeA"/>
             </constraints>
         </view>

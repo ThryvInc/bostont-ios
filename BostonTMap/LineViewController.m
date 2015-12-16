@@ -24,6 +24,9 @@ static NSString * const CellIdentifier = @"Stop Cell";
 {
     [super viewDidLoad];
     
+    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"StationTableViewCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
     
     [self.tableView setDelegate:self];

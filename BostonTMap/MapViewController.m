@@ -45,6 +45,7 @@ static float const AnimationDuration = .1;
     [self.subwayImageView addSubview:self.buttonView];
     [self.subwayImageView bringSubviewToFront:self.buttonView];
     [self.subwayImageView setUserInteractionEnabled:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
@@ -58,9 +59,13 @@ static float const AnimationDuration = .1;
 
 - (IBAction)schedulesPressed
 {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] init];
+    backButton.title = @"";
+    self.navigationItem.backBarButtonItem = backButton;
+    
     SchedulesViewController *scheduleVC = [[SchedulesViewController alloc] initWithNibName:@"SchedulesViewController" bundle:nil];
-    AdNavController *navVC = [[AdNavController alloc] initWithRootViewController:scheduleVC];
-    [self presentViewController:navVC animated:YES completion:^{}];
+    [self.navigationController pushViewController:scheduleVC animated:YES];
 }
 
 #pragma mark - <MPAdViewDelegate>

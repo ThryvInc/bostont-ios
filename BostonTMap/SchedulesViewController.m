@@ -24,16 +24,9 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Map"
-                                                                    style:UIBarButtonItemStylePlain
-                                                                   target:self
-                                                                   action:@selector(returnToMap)];
-    self.navigationItem.leftBarButtonItem = leftButton;
-}
-
-- (void)returnToMap
-{
-    [self.navigationController.presentingViewController dismissViewControllerAnimated:YES completion:^{}];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
 }
 
 - (IBAction)lineChosen:(UIButton *)sender
@@ -63,6 +56,11 @@
 - (void)lineLoaded:(Line *)line
 {
     [self.loadingView dismissWithClickedButtonIndex:0 animated:YES];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] init];
+    backButton.title = @"";
+    self.navigationItem.backBarButtonItem = backButton;
     
     LineViewController *lineVC = [[LineViewController alloc] initWithNibName:@"LineViewController" bundle:nil];
     lineVC.line = line;
