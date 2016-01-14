@@ -27,11 +27,11 @@ static float const AnimationDuration = .1;
 {
     [super viewDidLoad];
     // TODO: Replace this test id with your personal ad unit id
-    MPAdView* adView = [[MPAdView alloc] initWithAdUnitId:@"f34387b7990b4d85976abf940b2ad454"
+    MPAdView *adView = [[MPAdView alloc] initWithAdUnitId:@"f34387b7990b4d85976abf940b2ad454"
                                                      size:MOPUB_BANNER_SIZE];
     self.adView = adView;
     self.adView.delegate = self;
-    self.adView.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height,
+    self.adView.frame = CGRectMake(0, self.view.bounds.size.height,
                                    MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
     [self.view addSubview:self.adView];
     [self.adView loadAd];
@@ -70,8 +70,8 @@ static float const AnimationDuration = .1;
 {
     if (!self.bannerIsVisible){
         [UIView animateWithDuration:AnimationDuration animations:^{
-            banner.frame = CGRectOffset(banner.frame, 0, self.view.frame.size.height - MOPUB_BANNER_SIZE.height
-                                        + self.navigationBar.bounds.size.height);
+            banner.frame = CGRectOffset(banner.frame, 0, - MOPUB_BANNER_SIZE.height);
+
         }];
         self.bannerIsVisible = YES;
     }
@@ -82,9 +82,7 @@ static float const AnimationDuration = .1;
     if (self.bannerIsVisible){
         [UIView animateWithDuration:AnimationDuration animations:^{
             // banner is visible and we move it out of the screen, due to connection issue
-            banner.frame = CGRectOffset(banner.frame, 0,  -self.view.frame.size.height -MOPUB_BANNER_SIZE.height
-                                        - self.navigationBar.bounds.size.height
-                                        - [UIApplication sharedApplication].statusBarFrame.size.height);
+            banner.frame = CGRectOffset(banner.frame, 0, MOPUB_BANNER_SIZE.height);
         }];
         self.bannerIsVisible = NO;
     }
