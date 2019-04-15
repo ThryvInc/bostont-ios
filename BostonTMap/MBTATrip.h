@@ -6,9 +6,11 @@
 //
 //
 
-#import "MBTAPredictionObject.h"
+#import "MBTAModel.h"
+@class MBTAShape;
 
-@interface MBTATrip : MBTAPredictionObject
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSArray *stops;
+@interface MBTATrip : MBTAModel
+@property (nonatomic, strong) NSString *headsign;
+@property (nonatomic, strong) NSNumber *directionId;
+@property (nonatomic, strong) MBTAShape *shape;
 @end

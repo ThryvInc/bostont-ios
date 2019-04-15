@@ -7,25 +7,30 @@
 //
 
 #import "MBTATrip.h"
-#import "MBTAStop.h"
+#import "JSONAPIResourceDescriptor.h"
+#import "MBTAShape.h"
 
 @implementation MBTATrip
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey
-{
-    NSMutableDictionary *dict = [[super JSONKeyPathsByPropertyKey] mutableCopy];
-    [dict addEntriesFromDictionary:@{
-                                     @"name" : @"trip_name",
-                                     @"stops" : @"stop"
-                                     }];
-    return [dict copy];
+static JSONAPIResourceDescriptor *_descriptor = nil;
+
++ (JSONAPIResourceDescriptor*)descriptor {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _descriptor = [[JSONAPIResourceDescriptor alloc] initWithClass:[self class] forLinkedType:@"trip"];
+        
+        [self addPropertiesTo:_descriptor];
+    });
+    
+    return _descriptor;
 }
 
-+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key
-{
-    if ([key isEqualToString:@"stops"]) return [MTLJSONAdapter arrayTransformerWithModelClass:[MBTAStop class]];
++ (void)addPropertiesTo:(JSONAPIResourceDescriptor *)descriptor {
+    [super addPropertiesTo:descriptor];
+    [descriptor addProperty:@"headsign"];
+    [descriptor addProperty:@"directionId" withJsonName:@"direction_id"];
     
-    return nil;
+    [descriptor hasOne:[MBTAShape class] withName:@"shape"];
 }
 
 @end

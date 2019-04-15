@@ -7,36 +7,28 @@
 //
 
 #import "MBTAStop.h"
-#import "MBTAMode.h"
+#import "JSONAPIResourceDescriptor.h"
 
 @implementation MBTAStop
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey
-{
-    NSMutableDictionary *dict = [[super JSONKeyPathsByPropertyKey] mutableCopy];
-    [dict addEntriesFromDictionary:@{
-                                     @"parentId" : @"parent_station",
-                                     @"parentName" : @"parent_station_name",
-                                     @"modes" : @"mode",
-                                     @"stopId" : @"stop_id"
-                                     }];
-    return [dict copy];
+static JSONAPIResourceDescriptor *_descriptor = nil;
+
++ (JSONAPIResourceDescriptor*)descriptor {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _descriptor = [[JSONAPIResourceDescriptor alloc] initWithClass:[self class] forLinkedType:@"stop"];
+        
+        [self addPropertiesTo:_descriptor];
+    });
+    
+    return _descriptor;
 }
 
-+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key
-{
-    if ([key isEqualToString:@"modes"]) return [MTLJSONAdapter arrayTransformerWithModelClass:[MBTAMode class]];
-    
-    return nil;
++ (void)addPropertiesTo:(JSONAPIResourceDescriptor *)descriptor {
+    [super addPropertiesTo:descriptor];
+    [descriptor addProperty:@"name"];
+    [descriptor hasOne:[MBTAStop class] withName:@"parentStation" withJsonName:@"parent_station"];
 }
 
-- (BOOL)isEqual:(id)object
-{
-    if ([object class] != [self class]) return NO;
-    
-    MBTAStop *otherStop = object;
-    
-    return [otherStop.stopId isEqualToString:self.stopId];
-}
 
 @end

@@ -11,7 +11,8 @@
 
 @interface Prediction : NSObject
 @property (nonatomic) int predictionInSeconds;
-@property (nonatomic, strong) NSString *directionName;
+@property (nonatomic, strong) NSNumber *directionId;
+@property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) Route *route;
 
 + (Prediction *)earliestPredictionInArray:(NSArray *)predictions;

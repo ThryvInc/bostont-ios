@@ -29,6 +29,12 @@
     self.navigationController.navigationBar.translucent = YES;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self.navigationController.navigationBar setTintColor:[UIColor blueColor]];
+}
+
 - (IBAction)lineChosen:(UIButton *)sender
 {
     self.loadingView = [[UIAlertView alloc] initWithTitle:@"Loading" message:@"Please wait" delegate:nil cancelButtonTitle:nil otherButtonTitles: nil];

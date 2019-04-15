@@ -8,45 +8,109 @@
 
 #import "Station.h"
 #import "MBTAStop.h"
+#import "MBTAEstimate.h"
+#import "MBTATrip.h"
+#import "MBTAShape.h"
+#import "MBTARoute.h"
 #import "Prediction.h"
 #import "Route.h"
+#import "JSONAPI.h"
+#import "PredictionsByStopCall.h"
+#import "SchedulesByStopCall.h"
 
 @implementation Station
 
-- (BOOL)isStopAtStation:(MBTAStop *)stop
-{
-    if ([self.stops containsObject:stop]) return YES;
-    
-    return [self.stationId isEqualToString:stop.parentId];
-}
-
-- (void)addStopToStation:(MBTAStop *)stop
-{
-    if (!self.stops.count || [stop.parentId isEqualToString:self.stationId]) {
-        [self.stops addObject:stop];
-        
-        if (!self.stationId) {
-            self.stationId = stop.parentId;
-            self.stationName = stop.parentName;
-        }
-    }
-}
-
-- (void)addPrediction:(Prediction *)prediction
-{
-    [self.predictions addObject:prediction];
-    if (![self.routes containsObject:prediction.route]) {
-        [self.routes addObject:prediction.route];
-    }
-}
-
-- (NSArray *)predictionsForRoute:(Route *)route
+- (NSArray *)zeroPredictionsForRoute:(Route *)route
 {
     NSMutableArray *predictions = [[NSMutableArray alloc] init];
-    for (Prediction *prediction in self.predictions){
+    for (Prediction *prediction in self.zeroPredictions){
         if ([prediction.route isEqual:route]) [predictions addObject:prediction];
     }
-    return [predictions copy];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    return [predictions sortedArrayUsingDescriptors:@[sortDescriptor]];
+}
+
+- (NSArray *)onePredictionsForRoute:(Route *)route
+{
+    NSMutableArray *predictions = [[NSMutableArray alloc] init];
+    for (Prediction *prediction in self.onePredictions){
+        if ([prediction.route isEqual:route]) [predictions addObject:prediction];
+    }
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    return [predictions sortedArrayUsingDescriptors:@[sortDescriptor]];
+}
+
+- (void)refresh:(void (^)())completion {
+    NSMutableArray *predictedRoutes = [NSMutableArray new];
+    NSMutableArray *scheduledRoutes = [NSMutableArray new];
+    for (Route *route in self.routes) {
+        if (route.isPredictable) {
+            [predictedRoutes addObject:route.mbtaRouteId];
+        } else {
+            [scheduledRoutes addObject:route.mbtaRouteId];
+        }
+    }
+    
+    __block int semaphore = (int)self.routes.count;
+    
+    self.routes = [NSMutableArray new];
+    self.mbtaPredictions = [NSMutableArray new];
+    self.predictions = [NSMutableArray new];
+    self.zeroPredictions = [NSMutableArray new];
+    self.onePredictions = [NSMutableArray new];
+    
+    void (^callback)(NSData *, NSURLResponse *, NSError *) = ^void(NSData *data, NSURLResponse *response, NSError *error) {
+        if (!error && ((NSHTTPURLResponse *)response).statusCode < 300) {
+            NSDictionary *jsonDict = [[BaseNetworkCall new] dataToJSON:data];
+            JSONAPI *jsonApi = [JSONAPI jsonAPIWithDictionary:jsonDict];
+            NSArray<MBTAEstimate *> *estimates = jsonApi.resources;
+            
+            for (MBTAEstimate *estimate in estimates) {
+                [self.mbtaPredictions addObject:estimate];
+                
+                Prediction *prediction = [Prediction new];
+                prediction.directionId = estimate.trip.directionId;
+                prediction.date = estimate.predictionTime;
+                MBTATrip *trip = estimate.trip;
+                if ([trip.headsign.lowercaseString isEqualToString:@"ashmont"] || [trip.shape.name.lowercaseString isEqualToString:@"ashmont"]) {
+                    prediction.route = [Route ashmont];
+                } else if ([trip.headsign.lowercaseString isEqualToString:@"braintree"] || [trip.shape.name.lowercaseString isEqualToString:@"braintree"]) {
+                    prediction.route = [Route braintree];
+                } else {
+                    continue;
+                }
+                
+                if ([estimate.trip.directionId intValue] == 0) {
+                    [self.zeroPredictions addObject:prediction];
+                } else if ([estimate.trip.directionId intValue] == 1) {
+                    [self.onePredictions addObject:prediction];
+                }
+                
+                [self.predictions addObject:prediction];
+            }
+            
+            semaphore--;
+            if (semaphore == 0) {
+                completion();
+            }
+        }
+    };
+    
+    if (predictedRoutes.count) {
+        PredictionsByStopCall *call = [PredictionsByStopCall new];
+        [call configure];
+        call.route = [predictedRoutes componentsJoinedByString:@","];
+        call.stopId = self.stationId;
+        [call executeWithCompletionBlock:callback];
+    }
+    
+    if (scheduledRoutes.count) {
+        SchedulesByStopCall *call = [SchedulesByStopCall new];
+        [call configure];
+        call.route = [scheduledRoutes componentsJoinedByString:@","];
+        call.stopId = self.stationId;
+        [call executeWithCompletionBlock:callback];
+    }
 }
 
 - (BOOL)isEqual:(id)object
@@ -54,10 +118,6 @@
     if (![object isKindOfClass:[Station class]]) return NO;
     
     Station *otherStation = object;
-    
-    for (MBTAStop *stop in otherStation.stops){
-        if ([self.stops containsObject:stop]) return YES;
-    }
     
     return [otherStation.stationId isEqualToString:self.stationId];
 }
@@ -70,6 +130,24 @@
     return _stops;
 }
 
+- (NSMutableArray *)mbtaPredictions
+{
+    if (!_mbtaPredictions) _mbtaPredictions = [[NSMutableArray alloc] init];
+    return _mbtaPredictions;
+}
+
+- (NSMutableArray *)zeroPredictions
+{
+    if (!_zeroPredictions) _zeroPredictions = [[NSMutableArray alloc] init];
+    return _zeroPredictions;
+}
+
+- (NSMutableArray *)onePredictions
+{
+    if (!_onePredictions) _onePredictions = [[NSMutableArray alloc] init];
+    return _onePredictions;
+}
+
 - (NSMutableArray *)predictions
 {
     if (!_predictions) _predictions = [[NSMutableArray alloc] init];
@@ -78,7 +156,16 @@
 
 - (NSMutableArray *)routes
 {
-    if (!_routes) _routes = [[NSMutableArray alloc] init];
+    if (_routes.count == 0) {
+        _routes = [NSMutableArray new];
+        for (Prediction *prediction in self.predictions) {
+            if (prediction.route) {
+                if (![_routes containsObject:prediction.route]) {
+                    [_routes addObject:prediction.route];
+                }
+            }
+        }
+    }
     return _routes;
 }
 

@@ -1,36 +1,51 @@
 PODS:
-  - Expecta (1.0.0)
-  - Flurry-iOS-SDK/FlurrySDK (7.3.0)
-  - Google-Mobile-Ads-SDK (7.2.2)
-  - GPUImage (0.1.6)
-  - Mantle (2.0):
-    - Mantle/extobjc (= 2.0)
-  - Mantle/extobjc (2.0)
-  - OCMock (3.1.2)
-  - OHHTTPStubs (4.0.2)
+  - Expecta (1.0.6)
+  - Flurry-iOS-SDK/FlurrySDK (8.0.0)
+  - Google-Mobile-Ads-SDK (7.30.0)
+  - GPUImage (0.1.7)
+  - ISO8601DateFormatter (0.8)
+  - JSONAPI (1.0.7)
+  - OCMock (3.3.1)
+  - OHHTTPStubs (6.1.0):
+    - OHHTTPStubs/Default (= 6.1.0)
+  - OHHTTPStubs/Core (6.1.0)
+  - OHHTTPStubs/Default (6.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.1.0)
   - SBCategories (0.1.1)
-  - Specta (1.0.0)
+  - Specta (1.0.7)
 
 DEPENDENCIES:
   - Expecta
   - Flurry-iOS-SDK/FlurrySDK
-  - Google-Mobile-Ads-SDK (~> 7.0)
+  - Google-Mobile-Ads-SDK
   - GPUImage
-  - Mantle
+  - ISO8601DateFormatter
+  - JSONAPI
   - OCMock
   - OHHTTPStubs
   - SBCategories
   - Specta
 
 SPEC CHECKSUMS:
-  Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  Flurry-iOS-SDK: 054befae0fa0244fb000985bfe757d70f87a9f60
-  Google-Mobile-Ads-SDK: 9561b27b8dd2ef861ee74b4c1ba77104c4c5414a
-  GPUImage: 4675ce4a5370ca92fcea8623b2a08b8f0c51b940
-  Mantle: d7c75b6fb789b20f7ae30cd0d09435fe545896ff
-  OCMock: a10ea9f0a6e921651f96f78b6faee95ebc813b92
-  OHHTTPStubs: dbd1957d414659783e07b49c961940b7564c23d9
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  Flurry-iOS-SDK: 58f3e62320e1f92ce002b59905986ffdab7d8b82
+  Google-Mobile-Ads-SDK: 7404f68120ae8682afeb5af001fbf4aad731c78e
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  ISO8601DateFormatter: 4551b6ce4f83185425f583b0b3feb3c7b59b942c
+  JSONAPI: 8fed55fcfa08ee662674cd4f1bd03c37d8b34e03
+  OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
+  OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
   SBCategories: a2a126ee06eeacaac02d5e68533cd9de1b9bf1cc
-  Specta: 96fe05fe5c7348b5223f85e862904f6e832abb14
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 2f6b6be4ca8529a0c2d2e49fc218023652d606e9
+
+COCOAPODS: 1.4.0

@@ -12,7 +12,7 @@
 
 - (NSString *)endpoint
 {
-    return @"stopsbyroute";
+    return @"stops";
 }
 
 - (void)configure

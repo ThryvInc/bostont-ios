@@ -7,23 +7,22 @@
 //
 
 #import "MBTARoute.h"
-#import "MBTADirection.h"
+#import "JSONAPIResourceDescriptor.h"
+#import "JSONAPIPropertyDescriptor.h"
 
 @implementation MBTARoute
 
-+ (NSDictionary *)JSONKeyPathsByPropertyKey
-{
-    return @{
-             @"directions" : @"direction"
-             };
-}
+static JSONAPIResourceDescriptor *_descriptor = nil;
 
-+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key
-{
-    if ([key isEqualToString:@"directions"]) {
-        return [MTLJSONAdapter arrayTransformerWithModelClass:[MBTADirection class]];
-    }
-    return nil;
++ (JSONAPIResourceDescriptor*)descriptor {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _descriptor = [[JSONAPIResourceDescriptor alloc] initWithClass:[self class] forLinkedType:@"route"];
+        
+        [self addPropertiesTo:_descriptor];
+    });
+    
+    return _descriptor;
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Line;
+@class Line, Route, Station;
 
 @protocol LineDelegate <NSObject>
 - (void)lineLoaded:(Line *)line;
@@ -17,8 +17,8 @@
 
 @interface Line : NSObject
 @property (nonatomic, weak) NSObject<LineDelegate> *delegate;
-@property (nonatomic, strong) NSArray *routes;
-@property (nonatomic, strong) NSMutableArray *stations;
+@property (nonatomic, strong) NSArray<Route *> *routes;
+@property (nonatomic, strong) NSMutableArray<Station *> *stations;
 
 - (void)fetchRoutes;
 @end

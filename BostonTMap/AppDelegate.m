@@ -12,9 +12,9 @@
 #import "NagController.h"
 #import "AdNavController.h"
 #import <Fabric/Fabric.h>
-#import <MoPub/MoPub.h>
 #import <Crashlytics/Crashlytics.h>
-#import <YextRetap/YextRetap.h>
+
+@import GoogleMobileAds;
 
 @interface AppDelegate ()
 @property (nonatomic, strong) NagController *nagger;
@@ -24,8 +24,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Fabric with:@[CrashlyticsKit, MoPubKit]];
+    [Fabric with:@[CrashlyticsKit,]];
     [Flurry startSession:@"R3N3NS36S2BDR4XR4RFD"];
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-2574276621042285~8053279304"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -35,16 +36,6 @@
 
     self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
-    
-    #ifdef DEBUG
-        [[YextRetap sharedInstance]
-         initializeWithAppId:@"295fa7c17ccc40489a3ca14f1fdade4c"
-         productionMode:NO];
-    #else
-        [[YextRetap sharedInstance]
-         initializeWithAppId:@"295fa7c17ccc40489a3ca14f1fdade4c"
-         productionMode:YES];
-    #endif
     
     return YES;
 }

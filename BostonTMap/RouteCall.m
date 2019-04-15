@@ -10,9 +10,8 @@
 
 @implementation RouteCall
 
-- (void)setRoute:(NSString *)route
-{
-    self.getParams = [NSString stringWithFormat:@"route=%@&", route];
+- (NSString *)getParams {
+    return [NSString stringWithFormat:@"filter[route]=%@&", self.route];
 }
 
 @end

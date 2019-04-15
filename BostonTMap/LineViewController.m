@@ -8,11 +8,11 @@
 
 #import "LineViewController.h"
 #import "Line.h"
+#import "Route.h"
 #import "StationTableViewCell.h"
 
 @interface LineViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) StationTableViewCell *prototypeCell;
 
 @end
 
@@ -25,12 +25,15 @@ static NSString * const CellIdentifier = @"Stop Cell";
     [super viewDidLoad];
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
+    [self.navigationController.navigationBar setTintColor:((Route *)self.line.routes.firstObject).color];
     [self.navigationController.navigationBar setTranslucent:NO];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"StationTableViewCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
     
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
+    self.tableView.estimatedRowHeight = 50;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
@@ -47,12 +50,6 @@ static NSString * const CellIdentifier = @"Stop Cell";
     return self.line.stations.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    self.prototypeCell.station = self.line.stations[indexPath.row];
-    return [self.prototypeCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     StationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -67,14 +64,6 @@ static NSString * const CellIdentifier = @"Stop Cell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-}
-
-#pragma mark - lazy loading
-
-- (StationTableViewCell *)prototypeCell
-{
-    if (!_prototypeCell) _prototypeCell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    return _prototypeCell;
 }
 
 @end

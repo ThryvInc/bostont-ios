@@ -7,7 +7,6 @@
 //
 
 #import "MapViewController.h"
-#import <MoPub/MPAdView.h>
 #import "AdNavController.h"
 #import "SchedulesViewController.h"
 
@@ -58,12 +57,6 @@
     
     SchedulesViewController *scheduleVC = [[SchedulesViewController alloc] initWithNibName:@"SchedulesViewController" bundle:nil];
     [self.navigationController pushViewController:scheduleVC animated:YES];
-}
-
-- (IBAction)policyTapped
-{
-    NSURL *privacyPolicyURL = [NSURL URLWithString:@"https://teschrock.wordpress.com/transit-app-privacy-policy/"];
-    if ([[UIApplication sharedApplication] canOpenURL:privacyPolicyURL]) [[UIApplication sharedApplication] openURL:privacyPolicyURL];
 }
 
 @end

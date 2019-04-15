@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController">
             <connections>
-                <outlet property="privacyPolicyButton" destination="f1z-VO-Aku" id="vas-5r-5s5"/>
                 <outlet property="schedulesButton" destination="BHw-gb-ghW" id="1az-rs-Scj"/>
                 <outlet property="schedulesButtonTopConstraint" destination="XY2-Jm-afs" id="MKq-Y0-7OX"/>
                 <outlet property="subwayImageView" destination="BvJ-kK-aOF" id="5Sj-NH-2QT"/>
@@ -17,14 +20,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" bounces="NO" maximumZoomScale="15" translatesAutoresizingMaskIntoConstraints="NO" id="fCp-Xg-P7v">
-                    <rect key="frame" x="0.0" y="30" width="600" height="485"/>
+                    <rect key="frame" x="0.0" y="60" width="375" height="557"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="subway.png" translatesAutoresizingMaskIntoConstraints="NO" id="BvJ-kK-aOF">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="485"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
                         </imageView>
                     </subviews>
                     <constraints>
@@ -40,45 +43,30 @@
                     </connections>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHw-gb-ghW">
-                    <rect key="frame" x="0.0" y="22" width="600" height="40"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="0.0" y="22" width="375" height="40"/>
+                    <color key="backgroundColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="7zv-cz-ifB"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Schedules &gt;">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="schedulesPressed" destination="-1" eventType="touchUpInside" id="JiN-e9-HMU"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1z-VO-Aku">
-                    <rect key="frame" x="521" y="517" width="76" height="17"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="17" id="3Gx-AW-Mew"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
-                    <state key="normal" title="privacy policy  ">
-                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="policyTapped" destination="-1" eventType="touchUpInside" id="nQr-cd-7uc"/>
-                    </connections>
-                </button>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="fCp-Xg-P7v" secondAttribute="bottom" constant="85" id="1Lw-GR-I5w"/>
-                <constraint firstItem="f1z-VO-Aku" firstAttribute="trailing" secondItem="fCp-Xg-P7v" secondAttribute="trailing" constant="-3" id="2FC-pA-ZcO"/>
+                <constraint firstAttribute="bottom" secondItem="fCp-Xg-P7v" secondAttribute="bottom" constant="50" id="1Lw-GR-I5w"/>
                 <constraint firstItem="fCp-Xg-P7v" firstAttribute="leading" secondItem="BHw-gb-ghW" secondAttribute="leading" id="8wf-Tp-coT"/>
                 <constraint firstAttribute="trailing" secondItem="fCp-Xg-P7v" secondAttribute="trailing" id="ABM-pU-C1G"/>
-                <constraint firstItem="fCp-Xg-P7v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="QOX-0R-eXu"/>
-                <constraint firstItem="f1z-VO-Aku" firstAttribute="top" secondItem="fCp-Xg-P7v" secondAttribute="bottom" constant="2" id="S2j-PR-wcF"/>
+                <constraint firstItem="fCp-Xg-P7v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="QOX-0R-eXu"/>
                 <constraint firstItem="BHw-gb-ghW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="XY2-Jm-afs"/>
                 <constraint firstItem="BHw-gb-ghW" firstAttribute="trailing" secondItem="fCp-Xg-P7v" secondAttribute="trailing" id="aoL-eq-Wwj"/>
                 <constraint firstItem="fCp-Xg-P7v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iRD-eE-w6e"/>

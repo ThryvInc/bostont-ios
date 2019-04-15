@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *getParams;
 @property (nonatomic, strong) NSData *postData;
 
++ (NSString *)timeStringFrom:(NSString *)nowString;
 - (void)executeWithCompletionBlock:(void(^)(NSData *data, NSURLResponse *response, NSError *error))completionBlock;
 - (void)configure;
 - (NSDictionary *)dataToJSON:(NSData *)data;

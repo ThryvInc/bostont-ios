@@ -10,6 +10,35 @@
 
 @implementation Route
 
++ (Route *)routeFor:(NSString *)mbtaId
+{
+    Route *result;
+    for (Route *route in [self allRoutes]) {
+        if ([route.mbtaRouteId isEqualToString:mbtaId]) {
+            result = route;
+            break;
+        }
+    }
+    return result;
+}
+
++ (Route *)routeForHeadsign:(NSString *)headsign
+{
+    Route *result;
+    for (Route *route in [self allRoutes]) {
+        if ([route.routeName.lowercaseString isEqualToString:headsign.lowercaseString]) {
+            result = route;
+            break;
+        }
+    }
+    return result;
+}
+
++ (NSArray<Route *> *)allRoutes
+{
+    return @[[self ashmont], [self braintree], [self blue], [self greenB], [self greenC], [self greenD], [self greenE], [self orange]];
+}
+
 + (Route *)ashmont
 {
     return [[Route alloc] initWithId:@"Ashmont" mbtaId:@"Red" name:@"ASHMONT" color:[UIColor redColor] predictability:YES];
