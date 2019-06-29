@@ -6,8 +6,8 @@
 //
 //
 
-#import <Mantle/Mantle.h>
+#import "MBTAModel.h"
 
-@interface MBTARoute : MTLModel <MTLJSONSerializing>
+@interface MBTARoute : MBTAModel
 @property (nonatomic, strong) NSArray *directions;
 @end

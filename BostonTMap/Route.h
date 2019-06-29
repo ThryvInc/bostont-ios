@@ -15,6 +15,10 @@
 @property (nonatomic, strong) UIColor *color;
 @property (nonatomic) BOOL isPredictable;
 
++ (Route *)routeFor:(NSString *)mbtaId;
++ (Route *)routeForHeadsign:(NSString *)headsign;
+
++ (NSArray<Route *> *)allRoutes;
 + (Route *)ashmont;
 + (Route *)braintree;
 + (Route *)orange;

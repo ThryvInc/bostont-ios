@@ -26,9 +26,14 @@
     NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"predictionInSeconds" ascending:YES];
     NSArray *sortedPredictions = [predictions sortedArrayUsingDescriptors:@[descriptor]];
     for (Prediction *prediction in sortedPredictions){
-        if (![prediction.directionName isEqualToString:firstPrediction.directionName]) return prediction;
+        if (prediction.directionId != firstPrediction.directionId) return prediction;
     }
     return nil;
+}
+
+- (int)predictionInSeconds
+{
+    return (int)(self.date.timeIntervalSince1970 - [NSDate date].timeIntervalSince1970);
 }
 
 @end

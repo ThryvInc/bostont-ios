@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4907CF1F1B04525E008343AA /* GoogleAdMobCustomEvent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4907CF1E1B04525E008343AA /* GoogleAdMobCustomEvent.framework */; };
-		4907CF281B045BB2008343AA /* MoPub.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4907CF261B045BB2008343AA /* MoPub.bundle */; };
-		4907CF291B045BB2008343AA /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4907CF271B045BB2008343AA /* MoPub.framework */; };
 		49166CB1161F39BF0033EF9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49166CB0161F39BF0033EF9A /* UIKit.framework */; };
 		49166CB3161F39BF0033EF9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49166CB2161F39BF0033EF9A /* Foundation.framework */; };
 		49166CB5161F39BF0033EF9A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49166CB4161F39BF0033EF9A /* CoreGraphics.framework */; };
@@ -19,25 +16,21 @@
 		49166CC3161F39C00033EF9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 49166CC2161F39C00033EF9A /* Default.png */; };
 		49166CC5161F39C00033EF9A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49166CC4161F39C00033EF9A /* Default@2x.png */; };
 		49166CC7161F39C00033EF9A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49166CC6161F39C00033EF9A /* Default-568h@2x.png */; };
+		491C313F20A1E9BE00657A83 /* MBTAShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 491C313E20A1E9BE00657A83 /* MBTAShape.m */; };
 		491D21471B1695D800472867 /* NagController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491D21461B1695D800472867 /* NagController.m */; };
-		49403A051620C5B200783CCC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49403A041620C5B200783CCC /* iAd.framework */; };
+		4948F46E2092E50B00B716B4 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4948F46D2092E50B00B716B4 /* Media.xcassets */; };
 		494A51171AF8544F00C25B97 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51121AF8544F00C25B97 /* Security.framework */; };
 		494A51181AF8544F00C25B97 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51131AF8544F00C25B97 /* libc++.dylib */; };
 		494A51191AF8544F00C25B97 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51141AF8544F00C25B97 /* libz.dylib */; };
 		494A511A1AF8544F00C25B97 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51151AF8544F00C25B97 /* Fabric.framework */; };
 		494A511B1AF8544F00C25B97 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51161AF8544F00C25B97 /* Crashlytics.framework */; };
-		494A51291AF8550600C25B97 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A511C1AF8550500C25B97 /* AdSupport.framework */; };
-		494A512A1AF8550600C25B97 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A511D1AF8550500C25B97 /* CoreLocation.framework */; };
-		494A512B1AF8550600C25B97 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A511E1AF8550500C25B97 /* CoreTelephony.framework */; };
-		494A512C1AF8550600C25B97 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A511F1AF8550500C25B97 /* EventKit.framework */; };
-		494A512D1AF8550600C25B97 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51201AF8550500C25B97 /* EventKitUI.framework */; };
-		494A512E1AF8550600C25B97 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51211AF8550600C25B97 /* MessageUI.framework */; };
-		494A512F1AF8550600C25B97 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51221AF8550600C25B97 /* MediaPlayer.framework */; };
-		494A51301AF8550600C25B97 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51231AF8550600C25B97 /* PassKit.framework */; };
 		494A51311AF8550600C25B97 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51241AF8550600C25B97 /* QuartzCore.framework */; };
-		494A51321AF8550600C25B97 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51251AF8550600C25B97 /* Social.framework */; };
-		494A51331AF8550600C25B97 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494A51261AF8550600C25B97 /* StoreKit.framework */; };
-		4959D1A91621611000330D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4959D1A81621611000330D60 /* SystemConfiguration.framework */; };
+		49599C67208E223D004C332D /* MBTAEstimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49599C66208E223D004C332D /* MBTAEstimate.m */; };
+		49599C6A208E224B004C332D /* MBTAModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49599C69208E224B004C332D /* MBTAModel.m */; };
+		49599C6D208E2261004C332D /* MBTASchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 49599C6C208E2261004C332D /* MBTASchedule.m */; };
+		49599C70208E4A89004C332D /* StopCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 49599C6F208E4A89004C332D /* StopCall.m */; };
+		49599C73208F67D3004C332D /* PredictionsByStopCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 49599C72208F67D3004C332D /* PredictionsByStopCall.m */; };
+		49599C76208F680E004C332D /* SchedulesByStopCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 49599C75208F680E004C332D /* SchedulesByStopCall.m */; };
 		496968261651DAE800F1B8FC /* AdNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496968251651DAE800F1B8FC /* AdNavController.m */; };
 		4998BCC7177F8FBD00D02A0A /* subway.png in Resources */ = {isa = PBXBuildFile; fileRef = 4998BCC6177F8FBD00D02A0A /* subway.png */; };
 		49AE5A0B1B0008A600F17C6F /* SchedulesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A091B0008A600F17C6F /* SchedulesViewController.m */; };
@@ -49,11 +42,9 @@
 		49AE5A1A1B003AC700F17C6F /* StopsByRouteCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A191B003AC700F17C6F /* StopsByRouteCall.m */; };
 		49AE5A1D1B003ADB00F17C6F /* SchedulesByRouteCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A1C1B003ADB00F17C6F /* SchedulesByRouteCall.m */; };
 		49AE5A201B003FA100F17C6F /* MBTARoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A1F1B003FA100F17C6F /* MBTARoute.m */; };
-		49AE5A241B0041EF00F17C6F /* MBTAMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A231B0041EF00F17C6F /* MBTAMode.m */; };
-		49AE5A271B00420800F17C6F /* MBTADirection.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A261B00420800F17C6F /* MBTADirection.m */; };
 		49AE5A2A1B00421B00F17C6F /* MBTATrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A291B00421B00F17C6F /* MBTATrip.m */; };
 		49AE5A2D1B00422A00F17C6F /* MBTAStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A2C1B00422A00F17C6F /* MBTAStop.m */; };
-		49AE5A321B01689200F17C6F /* MBTAPredictionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A311B01689200F17C6F /* MBTAPredictionObject.m */; };
+		49AE5A321B01689200F17C6F /* MBTAPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A311B01689200F17C6F /* MBTAPrediction.m */; };
 		49BC5C4B1652FF6F00CD828B /* bticon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BC5C481652FF6F00CD828B /* bticon-57.png */; };
 		49BC5C4C1652FF6F00CD828B /* bticon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BC5C491652FF6F00CD828B /* bticon-72.png */; };
 		49BC5C4D1652FF6F00CD828B /* bticon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 49BC5C4A1652FF6F00CD828B /* bticon-114.png */; };
@@ -67,19 +58,9 @@
 		49C7D9A91B14F7C900B76BF0 /* PredictionsByRouteCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A161B003A2F00F17C6F /* PredictionsByRouteCall.m */; };
 		49C7D9AA1B14F7CC00B76BF0 /* RouteCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE5A131B00372100F17C6F /* RouteCall.m */; };
 		49C7D9AB1B14F7CE00B76BF0 /* BaseNetworkCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E855FE1AFFB63100E79527 /* BaseNetworkCall.m */; };
-		49C7D9AE1B14F83C00B76BF0 /* green_e_stops.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C7D9AD1B14F83C00B76BF0 /* green_e_stops.json */; };
-		49C7D9B01B14FAD200B76BF0 /* green_d_stops.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C7D9AF1B14FAD200B76BF0 /* green_d_stops.json */; };
-		49C7D9B21B14FAE100B76BF0 /* green_c_stops.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C7D9B11B14FAE100B76BF0 /* green_c_stops.json */; };
-		49C7D9B41B14FAFE00B76BF0 /* green_b_stops.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C7D9B31B14FAFE00B76BF0 /* green_b_stops.json */; };
-		49C7D9B61B14FB0C00B76BF0 /* green_b_sched.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C7D9B51B14FB0C00B76BF0 /* green_b_sched.json */; };
-		49C7D9B81B14FB1F00B76BF0 /* green_c_sched.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C7D9B71B14FB1F00B76BF0 /* green_c_sched.json */; };
-		49C7D9BA1B14FB3500B76BF0 /* green_d_sched.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C7D9B91B14FB3500B76BF0 /* green_d_sched.json */; };
-		49C7D9BC1B14FB5000B76BF0 /* green_e_sched.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C7D9BB1B14FB5000B76BF0 /* green_e_sched.json */; };
 		49C7D9BF1B14FD5B00B76BF0 /* LineSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C7D9BE1B14FD5B00B76BF0 /* LineSpec.m */; };
 		49C7D9C31B14FF1100B76BF0 /* DummyLineDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C7D9C21B14FF1100B76BF0 /* DummyLineDelegate.m */; };
 		49C7D9C51B150EC600B76BF0 /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C7D9C41B150EC600B76BF0 /* libobjc.A.dylib */; };
-		49C7D9C71B15146800B76BF0 /* MBTAPredictionObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C7D9C61B15146800B76BF0 /* MBTAPredictionObjectSpec.m */; };
-		49C7D9C91B15149300B76BF0 /* mbta_prediction_object.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C7D9C81B15149300B76BF0 /* mbta_prediction_object.json */; };
 		49E855FF1AFFB63100E79527 /* BaseNetworkCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E855FE1AFFB63100E79527 /* BaseNetworkCall.m */; };
 		49E856021AFFC83C00E79527 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E856011AFFC83C00E79527 /* Line.m */; };
 		49E856051AFFC8C000E79527 /* Prediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E856041AFFC8C000E79527 /* Prediction.m */; };
@@ -99,8 +80,8 @@
 		49EAE8B31B13C5DC0055A985 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 49EAE8AF1B13C5DC0055A985 /* arrow_left.png */; };
 		49EAE8B41B13C5DC0055A985 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 49EAE8B01B13C5DC0055A985 /* arrow_right.png */; };
 		49EAE8B51B13C5DC0055A985 /* arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 49EAE8B11B13C5DC0055A985 /* arrow_up.png */; };
-		64625B9C1AAC4080FBFC9C9E /* libPods-BostonTMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED6A941EC85AD954B70A3C0 /* libPods-BostonTMap.a */; };
-		B7714D61CEF466FDA366B5C2 /* libPods-BostonTMapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94312ABBDED094D2E2C1D347 /* libPods-BostonTMapTests.a */; };
+		89623DA0E93C1FE8141FD3A1 /* libPods-BostonTMapTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE9285C0086078CF8F091B6 /* libPods-BostonTMapTests.a */; };
+		D990121F318194CE89F258F7 /* libPods-BostonTMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D33793A377FF01F65666337F /* libPods-BostonTMap.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,11 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14DDF3ABEC7CE7CB81A91E29 /* Pods-BostonTMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMapTests/Pods-BostonTMapTests.debug.xcconfig"; sourceTree = "<group>"; };
-		47345B609643DE29E678FC27 /* Pods-BostonTMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMapTests/Pods-BostonTMapTests.release.xcconfig"; sourceTree = "<group>"; };
-		4907CF1E1B04525E008343AA /* GoogleAdMobCustomEvent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAdMobCustomEvent.framework; sourceTree = "<group>"; };
-		4907CF261B045BB2008343AA /* MoPub.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MoPub.bundle; sourceTree = "<group>"; };
-		4907CF271B045BB2008343AA /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = "<group>"; };
+		1D158B15E31E337E848B9914 /* Pods-BostonTMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap.release.xcconfig"; sourceTree = "<group>"; };
 		49166CAC161F39BF0033EF9A /* BostonTMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BostonTMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49166CB0161F39BF0033EF9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49166CB2161F39BF0033EF9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -132,26 +109,30 @@
 		49166CC2161F39C00033EF9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		49166CC4161F39C00033EF9A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		49166CC6161F39C00033EF9A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		491C313D20A1E9BE00657A83 /* MBTAShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTAShape.h; sourceTree = "<group>"; };
+		491C313E20A1E9BE00657A83 /* MBTAShape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTAShape.m; sourceTree = "<group>"; };
 		491D21451B1695D800472867 /* NagController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NagController.h; sourceTree = "<group>"; };
 		491D21461B1695D800472867 /* NagController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NagController.m; sourceTree = "<group>"; };
-		49403A041620C5B200783CCC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		4948F46D2092E50B00B716B4 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		494A51121AF8544F00C25B97 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		494A51131AF8544F00C25B97 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		494A51141AF8544F00C25B97 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		494A51151AF8544F00C25B97 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		494A51161AF8544F00C25B97 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		494A511C1AF8550500C25B97 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		494A511D1AF8550500C25B97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		494A511E1AF8550500C25B97 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		494A511F1AF8550500C25B97 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		494A51201AF8550500C25B97 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
-		494A51211AF8550600C25B97 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		494A51221AF8550600C25B97 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		494A51231AF8550600C25B97 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		494A51241AF8550600C25B97 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		494A51251AF8550600C25B97 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		494A51261AF8550600C25B97 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		4959D1A81621611000330D60 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		49599C65208E223D004C332D /* MBTAEstimate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTAEstimate.h; sourceTree = "<group>"; };
+		49599C66208E223D004C332D /* MBTAEstimate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTAEstimate.m; sourceTree = "<group>"; };
+		49599C68208E224B004C332D /* MBTAModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTAModel.h; sourceTree = "<group>"; };
+		49599C69208E224B004C332D /* MBTAModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTAModel.m; sourceTree = "<group>"; };
+		49599C6B208E2261004C332D /* MBTASchedule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTASchedule.h; sourceTree = "<group>"; };
+		49599C6C208E2261004C332D /* MBTASchedule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTASchedule.m; sourceTree = "<group>"; };
+		49599C6E208E4A89004C332D /* StopCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StopCall.h; sourceTree = "<group>"; };
+		49599C6F208E4A89004C332D /* StopCall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StopCall.m; sourceTree = "<group>"; };
+		49599C71208F67D3004C332D /* PredictionsByStopCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PredictionsByStopCall.h; sourceTree = "<group>"; };
+		49599C72208F67D3004C332D /* PredictionsByStopCall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PredictionsByStopCall.m; sourceTree = "<group>"; };
+		49599C74208F680E004C332D /* SchedulesByStopCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SchedulesByStopCall.h; sourceTree = "<group>"; };
+		49599C75208F680E004C332D /* SchedulesByStopCall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchedulesByStopCall.m; sourceTree = "<group>"; };
 		496968241651DAE800F1B8FC /* AdNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdNavController.h; sourceTree = "<group>"; };
 		496968251651DAE800F1B8FC /* AdNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdNavController.m; sourceTree = "<group>"; };
 		4998BCC6177F8FBD00D02A0A /* subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subway.png; path = BostonTMap/subway.png; sourceTree = "<group>"; };
@@ -171,16 +152,12 @@
 		49AE5A1C1B003ADB00F17C6F /* SchedulesByRouteCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulesByRouteCall.m; sourceTree = "<group>"; };
 		49AE5A1E1B003FA100F17C6F /* MBTARoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTARoute.h; sourceTree = "<group>"; };
 		49AE5A1F1B003FA100F17C6F /* MBTARoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTARoute.m; sourceTree = "<group>"; };
-		49AE5A221B0041EF00F17C6F /* MBTAMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTAMode.h; sourceTree = "<group>"; };
-		49AE5A231B0041EF00F17C6F /* MBTAMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTAMode.m; sourceTree = "<group>"; };
-		49AE5A251B00420800F17C6F /* MBTADirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTADirection.h; sourceTree = "<group>"; };
-		49AE5A261B00420800F17C6F /* MBTADirection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTADirection.m; sourceTree = "<group>"; };
 		49AE5A281B00421B00F17C6F /* MBTATrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTATrip.h; sourceTree = "<group>"; };
 		49AE5A291B00421B00F17C6F /* MBTATrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTATrip.m; sourceTree = "<group>"; };
 		49AE5A2B1B00422A00F17C6F /* MBTAStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTAStop.h; sourceTree = "<group>"; };
 		49AE5A2C1B00422A00F17C6F /* MBTAStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTAStop.m; sourceTree = "<group>"; };
-		49AE5A301B01689200F17C6F /* MBTAPredictionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTAPredictionObject.h; sourceTree = "<group>"; };
-		49AE5A311B01689200F17C6F /* MBTAPredictionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTAPredictionObject.m; sourceTree = "<group>"; };
+		49AE5A301B01689200F17C6F /* MBTAPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTAPrediction.h; sourceTree = "<group>"; };
+		49AE5A311B01689200F17C6F /* MBTAPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTAPrediction.m; sourceTree = "<group>"; };
 		49AE5A371B016AC900F17C6F /* BostonTMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BostonTMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AE5A3A1B016AC900F17C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49BC5C481652FF6F00CD828B /* bticon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bticon-57.png"; sourceTree = "<group>"; };
@@ -193,20 +170,10 @@
 		49C1B7741B0EEDCA00F109C3 /* RouteTimesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteTimesView.m; sourceTree = "<group>"; };
 		49C6C4881AF8637300C9A0D7 /* bticon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bticon-120.png"; sourceTree = "<group>"; };
 		49C7D9A41B14F4FB00B76BF0 /* SchedulesByRouteCallSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchedulesByRouteCallSpec.m; sourceTree = "<group>"; };
-		49C7D9AD1B14F83C00B76BF0 /* green_e_stops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_e_stops.json; sourceTree = "<group>"; };
-		49C7D9AF1B14FAD200B76BF0 /* green_d_stops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_d_stops.json; sourceTree = "<group>"; };
-		49C7D9B11B14FAE100B76BF0 /* green_c_stops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_c_stops.json; sourceTree = "<group>"; };
-		49C7D9B31B14FAFE00B76BF0 /* green_b_stops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_b_stops.json; sourceTree = "<group>"; };
-		49C7D9B51B14FB0C00B76BF0 /* green_b_sched.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_b_sched.json; sourceTree = "<group>"; };
-		49C7D9B71B14FB1F00B76BF0 /* green_c_sched.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_c_sched.json; sourceTree = "<group>"; };
-		49C7D9B91B14FB3500B76BF0 /* green_d_sched.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_d_sched.json; sourceTree = "<group>"; };
-		49C7D9BB1B14FB5000B76BF0 /* green_e_sched.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_e_sched.json; sourceTree = "<group>"; };
 		49C7D9BE1B14FD5B00B76BF0 /* LineSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineSpec.m; sourceTree = "<group>"; };
 		49C7D9C11B14FF1100B76BF0 /* DummyLineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyLineDelegate.h; sourceTree = "<group>"; };
 		49C7D9C21B14FF1100B76BF0 /* DummyLineDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyLineDelegate.m; sourceTree = "<group>"; };
 		49C7D9C41B150EC600B76BF0 /* libobjc.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.A.dylib; path = usr/lib/libobjc.A.dylib; sourceTree = SDKROOT; };
-		49C7D9C61B15146800B76BF0 /* MBTAPredictionObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTAPredictionObjectSpec.m; sourceTree = "<group>"; };
-		49C7D9C81B15149300B76BF0 /* mbta_prediction_object.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mbta_prediction_object.json; sourceTree = "<group>"; };
 		49E855FD1AFFB63100E79527 /* BaseNetworkCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetworkCall.h; sourceTree = "<group>"; };
 		49E855FE1AFFB63100E79527 /* BaseNetworkCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetworkCall.m; sourceTree = "<group>"; };
 		49E856001AFFC83C00E79527 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
@@ -234,10 +201,11 @@
 		49EAE8AF1B13C5DC0055A985 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
 		49EAE8B01B13C5DC0055A985 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		49EAE8B11B13C5DC0055A985 /* arrow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_up.png; sourceTree = "<group>"; };
-		94312ABBDED094D2E2C1D347 /* libPods-BostonTMapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BostonTMapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ED6A941EC85AD954B70A3C0 /* libPods-BostonTMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BostonTMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA649069EC819D5B5FE3232F /* Pods-BostonTMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap.debug.xcconfig"; sourceTree = "<group>"; };
-		F9DDC865652C0451BDFB3938 /* Pods-BostonTMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap.release.xcconfig"; sourceTree = "<group>"; };
+		8CE9285C0086078CF8F091B6 /* libPods-BostonTMapTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BostonTMapTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF67F49B16D47E2169F6711 /* Pods-BostonTMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMapTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMapTests/Pods-BostonTMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD5182168049B72349234DF2 /* Pods-BostonTMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMapTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMapTests/Pods-BostonTMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		D33793A377FF01F65666337F /* libPods-BostonTMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BostonTMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CDADE03934F7D85247684D /* Pods-BostonTMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BostonTMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,29 +214,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				494A51311AF8550600C25B97 /* QuartzCore.framework in Frameworks */,
-				4959D1A91621611000330D60 /* SystemConfiguration.framework in Frameworks */,
-				494A512C1AF8550600C25B97 /* EventKit.framework in Frameworks */,
-				494A512E1AF8550600C25B97 /* MessageUI.framework in Frameworks */,
 				494A511A1AF8544F00C25B97 /* Fabric.framework in Frameworks */,
-				494A512B1AF8550600C25B97 /* CoreTelephony.framework in Frameworks */,
-				494A512A1AF8550600C25B97 /* CoreLocation.framework in Frameworks */,
-				49403A051620C5B200783CCC /* iAd.framework in Frameworks */,
 				49166CB1161F39BF0033EF9A /* UIKit.framework in Frameworks */,
-				4907CF1F1B04525E008343AA /* GoogleAdMobCustomEvent.framework in Frameworks */,
-				494A51321AF8550600C25B97 /* Social.framework in Frameworks */,
 				49166CB3161F39BF0033EF9A /* Foundation.framework in Frameworks */,
-				494A512D1AF8550600C25B97 /* EventKitUI.framework in Frameworks */,
-				494A51291AF8550600C25B97 /* AdSupport.framework in Frameworks */,
 				494A51171AF8544F00C25B97 /* Security.framework in Frameworks */,
 				494A51191AF8544F00C25B97 /* libz.dylib in Frameworks */,
 				49166CB5161F39BF0033EF9A /* CoreGraphics.framework in Frameworks */,
-				494A51301AF8550600C25B97 /* PassKit.framework in Frameworks */,
 				494A51181AF8544F00C25B97 /* libc++.dylib in Frameworks */,
-				64625B9C1AAC4080FBFC9C9E /* libPods-BostonTMap.a in Frameworks */,
-				494A512F1AF8550600C25B97 /* MediaPlayer.framework in Frameworks */,
 				494A511B1AF8544F00C25B97 /* Crashlytics.framework in Frameworks */,
-				4907CF291B045BB2008343AA /* MoPub.framework in Frameworks */,
-				494A51331AF8550600C25B97 /* StoreKit.framework in Frameworks */,
+				D990121F318194CE89F258F7 /* libPods-BostonTMap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49C7D9C51B150EC600B76BF0 /* libobjc.A.dylib in Frameworks */,
-				B7714D61CEF466FDA366B5C2 /* libPods-BostonTMapTests.a in Frameworks */,
+				89623DA0E93C1FE8141FD3A1 /* libPods-BostonTMapTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +246,7 @@
 				49AE5A381B016AC900F17C6F /* BostonTMapTests */,
 				49166CAF161F39BF0033EF9A /* Frameworks */,
 				49166CAD161F39BF0033EF9A /* Products */,
-				4D878024EAED68B283623642 /* Pods */,
+				81E516A119B48C98C4928E28 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -309,32 +263,18 @@
 			isa = PBXGroup;
 			children = (
 				49C7D9C41B150EC600B76BF0 /* libobjc.A.dylib */,
-				4907CF261B045BB2008343AA /* MoPub.bundle */,
-				4907CF271B045BB2008343AA /* MoPub.framework */,
-				4907CF1E1B04525E008343AA /* GoogleAdMobCustomEvent.framework */,
-				494A511C1AF8550500C25B97 /* AdSupport.framework */,
-				494A511D1AF8550500C25B97 /* CoreLocation.framework */,
-				494A511E1AF8550500C25B97 /* CoreTelephony.framework */,
-				494A511F1AF8550500C25B97 /* EventKit.framework */,
-				494A51201AF8550500C25B97 /* EventKitUI.framework */,
-				494A51211AF8550600C25B97 /* MessageUI.framework */,
-				494A51221AF8550600C25B97 /* MediaPlayer.framework */,
-				494A51231AF8550600C25B97 /* PassKit.framework */,
 				494A51241AF8550600C25B97 /* QuartzCore.framework */,
-				494A51251AF8550600C25B97 /* Social.framework */,
 				494A51261AF8550600C25B97 /* StoreKit.framework */,
 				494A51121AF8544F00C25B97 /* Security.framework */,
 				494A51131AF8544F00C25B97 /* libc++.dylib */,
 				494A51141AF8544F00C25B97 /* libz.dylib */,
 				494A51151AF8544F00C25B97 /* Fabric.framework */,
 				494A51161AF8544F00C25B97 /* Crashlytics.framework */,
-				49403A041620C5B200783CCC /* iAd.framework */,
-				4959D1A81621611000330D60 /* SystemConfiguration.framework */,
 				49166CB0161F39BF0033EF9A /* UIKit.framework */,
 				49166CB2161F39BF0033EF9A /* Foundation.framework */,
 				49166CB4161F39BF0033EF9A /* CoreGraphics.framework */,
-				9ED6A941EC85AD954B70A3C0 /* libPods-BostonTMap.a */,
-				94312ABBDED094D2E2C1D347 /* libPods-BostonTMapTests.a */,
+				D33793A377FF01F65666337F /* libPods-BostonTMap.a */,
+				8CE9285C0086078CF8F091B6 /* libPods-BostonTMapTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -354,6 +294,7 @@
 				49BC5C481652FF6F00CD828B /* bticon-57.png */,
 				49BC5C491652FF6F00CD828B /* bticon-72.png */,
 				49BC5C4A1652FF6F00CD828B /* bticon-114.png */,
+				4948F46D2092E50B00B716B4 /* Media.xcassets */,
 				49EAE8AE1B13C5DC0055A985 /* arrow_down.png */,
 				49EAE8AF1B13C5DC0055A985 /* arrow_left.png */,
 				49EAE8B01B13C5DC0055A985 /* arrow_right.png */,
@@ -379,6 +320,34 @@
 				49166CC6161F39C00033EF9A /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49599C77208F681D004C332D /* Stop calls */ = {
+			isa = PBXGroup;
+			children = (
+				49599C6E208E4A89004C332D /* StopCall.h */,
+				49599C6F208E4A89004C332D /* StopCall.m */,
+				49599C71208F67D3004C332D /* PredictionsByStopCall.h */,
+				49599C72208F67D3004C332D /* PredictionsByStopCall.m */,
+				49599C74208F680E004C332D /* SchedulesByStopCall.h */,
+				49599C75208F680E004C332D /* SchedulesByStopCall.m */,
+			);
+			name = "Stop calls";
+			sourceTree = "<group>";
+		};
+		49599C78208F6837004C332D /* Route calls */ = {
+			isa = PBXGroup;
+			children = (
+				49AE5A121B00372100F17C6F /* RouteCall.h */,
+				49AE5A131B00372100F17C6F /* RouteCall.m */,
+				49AE5A151B003A2F00F17C6F /* PredictionsByRouteCall.h */,
+				49AE5A161B003A2F00F17C6F /* PredictionsByRouteCall.m */,
+				49AE5A181B003AC700F17C6F /* StopsByRouteCall.h */,
+				49AE5A191B003AC700F17C6F /* StopsByRouteCall.m */,
+				49AE5A1B1B003ADB00F17C6F /* SchedulesByRouteCall.h */,
+				49AE5A1C1B003ADB00F17C6F /* SchedulesByRouteCall.m */,
+			);
+			name = "Route calls";
 			sourceTree = "<group>";
 		};
 		4974F7041AFCD01B00816CF8 /* Controllers */ = {
@@ -436,18 +405,22 @@
 		49AE5A211B003FA700F17C6F /* MBTA Models */ = {
 			isa = PBXGroup;
 			children = (
+				49599C68208E224B004C332D /* MBTAModel.h */,
+				49599C69208E224B004C332D /* MBTAModel.m */,
 				49AE5A1E1B003FA100F17C6F /* MBTARoute.h */,
 				49AE5A1F1B003FA100F17C6F /* MBTARoute.m */,
-				49AE5A221B0041EF00F17C6F /* MBTAMode.h */,
-				49AE5A231B0041EF00F17C6F /* MBTAMode.m */,
-				49AE5A251B00420800F17C6F /* MBTADirection.h */,
-				49AE5A261B00420800F17C6F /* MBTADirection.m */,
 				49AE5A281B00421B00F17C6F /* MBTATrip.h */,
 				49AE5A291B00421B00F17C6F /* MBTATrip.m */,
 				49AE5A2B1B00422A00F17C6F /* MBTAStop.h */,
 				49AE5A2C1B00422A00F17C6F /* MBTAStop.m */,
-				49AE5A301B01689200F17C6F /* MBTAPredictionObject.h */,
-				49AE5A311B01689200F17C6F /* MBTAPredictionObject.m */,
+				49599C65208E223D004C332D /* MBTAEstimate.h */,
+				49599C66208E223D004C332D /* MBTAEstimate.m */,
+				49AE5A301B01689200F17C6F /* MBTAPrediction.h */,
+				49AE5A311B01689200F17C6F /* MBTAPrediction.m */,
+				49599C6B208E2261004C332D /* MBTASchedule.h */,
+				49599C6C208E2261004C332D /* MBTASchedule.m */,
+				491C313D20A1E9BE00657A83 /* MBTAShape.h */,
+				491C313E20A1E9BE00657A83 /* MBTAShape.m */,
 			);
 			name = "MBTA Models";
 			sourceTree = "<group>";
@@ -483,15 +456,6 @@
 		49C7D9AC1B14F81D00B76BF0 /* json */ = {
 			isa = PBXGroup;
 			children = (
-				49C7D9AD1B14F83C00B76BF0 /* green_e_stops.json */,
-				49C7D9BB1B14FB5000B76BF0 /* green_e_sched.json */,
-				49C7D9AF1B14FAD200B76BF0 /* green_d_stops.json */,
-				49C7D9B91B14FB3500B76BF0 /* green_d_sched.json */,
-				49C7D9B11B14FAE100B76BF0 /* green_c_stops.json */,
-				49C7D9B71B14FB1F00B76BF0 /* green_c_sched.json */,
-				49C7D9B31B14FAFE00B76BF0 /* green_b_stops.json */,
-				49C7D9B51B14FB0C00B76BF0 /* green_b_sched.json */,
-				49C7D9C81B15149300B76BF0 /* mbta_prediction_object.json */,
 			);
 			name = json;
 			sourceTree = "<group>";
@@ -500,7 +464,6 @@
 			isa = PBXGroup;
 			children = (
 				49C7D9BE1B14FD5B00B76BF0 /* LineSpec.m */,
-				49C7D9C61B15146800B76BF0 /* MBTAPredictionObjectSpec.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -519,25 +482,19 @@
 			children = (
 				49E855FD1AFFB63100E79527 /* BaseNetworkCall.h */,
 				49E855FE1AFFB63100E79527 /* BaseNetworkCall.m */,
-				49AE5A121B00372100F17C6F /* RouteCall.h */,
-				49AE5A131B00372100F17C6F /* RouteCall.m */,
-				49AE5A151B003A2F00F17C6F /* PredictionsByRouteCall.h */,
-				49AE5A161B003A2F00F17C6F /* PredictionsByRouteCall.m */,
-				49AE5A181B003AC700F17C6F /* StopsByRouteCall.h */,
-				49AE5A191B003AC700F17C6F /* StopsByRouteCall.m */,
-				49AE5A1B1B003ADB00F17C6F /* SchedulesByRouteCall.h */,
-				49AE5A1C1B003ADB00F17C6F /* SchedulesByRouteCall.m */,
+				49599C77208F681D004C332D /* Stop calls */,
+				49599C78208F6837004C332D /* Route calls */,
 			);
 			name = "Network Calls";
 			sourceTree = "<group>";
 		};
-		4D878024EAED68B283623642 /* Pods */ = {
+		81E516A119B48C98C4928E28 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EA649069EC819D5B5FE3232F /* Pods-BostonTMap.debug.xcconfig */,
-				F9DDC865652C0451BDFB3938 /* Pods-BostonTMap.release.xcconfig */,
-				14DDF3ABEC7CE7CB81A91E29 /* Pods-BostonTMapTests.debug.xcconfig */,
-				47345B609643DE29E678FC27 /* Pods-BostonTMapTests.release.xcconfig */,
+				F2CDADE03934F7D85247684D /* Pods-BostonTMap.debug.xcconfig */,
+				1D158B15E31E337E848B9914 /* Pods-BostonTMap.release.xcconfig */,
+				9CF67F49B16D47E2169F6711 /* Pods-BostonTMapTests.debug.xcconfig */,
+				BD5182168049B72349234DF2 /* Pods-BostonTMapTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -549,12 +506,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49166CD0161F39C00033EF9A /* Build configuration list for PBXNativeTarget "BostonTMap" */;
 			buildPhases = (
-				DF7B3DEB167AFFE5A5D17D3D /* Check Pods Manifest.lock */,
+				FBC2CC7C5C2AA9790F1CCBE0 /* [CP] Check Pods Manifest.lock */,
+				C218714285D107D232B22950 /* Check Pods Manifest.lock */,
 				49166CA8161F39BF0033EF9A /* Sources */,
 				49166CA9161F39BF0033EF9A /* Frameworks */,
 				49166CAA161F39BF0033EF9A /* Resources */,
-				02B6B9108FEBC5F6F38D17E9 /* Copy Pods Resources */,
 				494A51111AF8542500C25B97 /* ShellScript */,
+				DDBE3F80540245FC2511B873 /* Embed Pods Frameworks */,
+				DCABC3319FAB66C04FC200AE /* Copy Pods Resources */,
+				DD914A0A19FF97EA05078E82 /* [CP] Embed Pods Frameworks */,
+				EE525D3436E489F67D6824DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -569,11 +530,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49AE5A3F1B016ACA00F17C6F /* Build configuration list for PBXNativeTarget "BostonTMapTests" */;
 			buildPhases = (
-				6148380FD660C0552ED0C0EB /* Check Pods Manifest.lock */,
+				2FE266971D3C3E7D8A3387DA /* [CP] Check Pods Manifest.lock */,
+				F840D85CBBCCDB20F48120B8 /* Check Pods Manifest.lock */,
 				49AE5A331B016AC900F17C6F /* Sources */,
 				49AE5A341B016AC900F17C6F /* Frameworks */,
 				49AE5A351B016AC900F17C6F /* Resources */,
-				CFA68C68F285AB58A8A89EFC /* Copy Pods Resources */,
+				B25F81F6925EBD3FBB468568 /* Embed Pods Frameworks */,
+				15E704CB1D6583FDD0031B9D /* Copy Pods Resources */,
+				C1122C83E0BF4E4C4DC2DD95 /* [CP] Embed Pods Frameworks */,
+				92B63C1A51C06B5DC1A1CE0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -593,6 +558,10 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				TargetAttributes = {
+					49166CAB161F39BF0033EF9A = {
+						DevelopmentTeam = PE7EQ66NRS;
+						ProvisioningStyle = Automatic;
+					};
 					49AE5A361B016AC900F17C6F = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = 49166CAB161F39BF0033EF9A;
@@ -627,6 +596,7 @@
 				49166CBB161F39C00033EF9A /* InfoPlist.strings in Resources */,
 				49EAE8AC1B13C0CA0055A985 /* arrow_right_white.png in Resources */,
 				49AE5A111B000D1D00F17C6F /* LineViewController.xib in Resources */,
+				4948F46E2092E50B00B716B4 /* Media.xcassets in Resources */,
 				49166CC3161F39C00033EF9A /* Default.png in Resources */,
 				49EAE8A21B125E8B0055A985 /* RouteTimesView.xib in Resources */,
 				49C1B7721B0EEAAB00F109C3 /* StationTableViewCell.xib in Resources */,
@@ -640,7 +610,6 @@
 				49EAE89D1B1227240055A985 /* RoutesTimesView.xib in Resources */,
 				49C6C4891AF8637300C9A0D7 /* bticon-120.png in Resources */,
 				49EAE8B21B13C5DC0055A985 /* arrow_down.png in Resources */,
-				4907CF281B045BB2008343AA /* MoPub.bundle in Resources */,
 				49BC5C4D1652FF6F00CD828B /* bticon-114.png in Resources */,
 				4998BCC7177F8FBD00D02A0A /* subway.png in Resources */,
 				49EAE8B31B13C5DC0055A985 /* arrow_left.png in Resources */,
@@ -653,22 +622,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49C7D9BA1B14FB3500B76BF0 /* green_d_sched.json in Resources */,
-				49C7D9B41B14FAFE00B76BF0 /* green_b_stops.json in Resources */,
-				49C7D9B81B14FB1F00B76BF0 /* green_c_sched.json in Resources */,
-				49C7D9B61B14FB0C00B76BF0 /* green_b_sched.json in Resources */,
-				49C7D9B21B14FAE100B76BF0 /* green_c_stops.json in Resources */,
-				49C7D9C91B15149300B76BF0 /* mbta_prediction_object.json in Resources */,
-				49C7D9BC1B14FB5000B76BF0 /* green_e_sched.json in Resources */,
-				49C7D9B01B14FAD200B76BF0 /* green_d_stops.json in Resources */,
-				49C7D9AE1B14F83C00B76BF0 /* green_e_stops.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		02B6B9108FEBC5F6F38D17E9 /* Copy Pods Resources */ = {
+		15E704CB1D6583FDD0031B9D /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -680,7 +640,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMapTests/Pods-BostonTMapTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FE266971D3C3E7D8A3387DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BostonTMapTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		494A51111AF8542500C25B97 /* ShellScript */ = {
@@ -696,7 +674,52 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run b1bc39c835159dcffd9f2950a40007e570069713 dde132f14bcd45d54cbbb551f59876744bc3ab28f3e393f236602a2354a4994a";
 		};
-		6148380FD660C0552ED0C0EB /* Check Pods Manifest.lock */ = {
+		92B63C1A51C06B5DC1A1CE0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMapTests/Pods-BostonTMapTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B25F81F6925EBD3FBB468568 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMapTests/Pods-BostonTMapTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1122C83E0BF4E4C4DC2DD95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMapTests/Pods-BostonTMapTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C218714285D107D232B22950 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -711,7 +734,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CFA68C68F285AB58A8A89EFC /* Copy Pods Resources */ = {
+		DCABC3319FAB66C04FC200AE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -723,10 +746,68 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMapTests/Pods-BostonTMapTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DF7B3DEB167AFFE5A5D17D3D /* Check Pods Manifest.lock */ = {
+		DD914A0A19FF97EA05078E82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDBE3F80540245FC2511B873 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE525D3436E489F67D6824DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SBCategories/SBCategories.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SBCategories.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BostonTMap/Pods-BostonTMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F840D85CBBCCDB20F48120B8 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -739,6 +820,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC2CC7C5C2AA9790F1CCBE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BostonTMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -751,26 +850,31 @@
 				49166CBD161F39C00033EF9A /* main.m in Sources */,
 				49E856051AFFC8C000E79527 /* Prediction.m in Sources */,
 				49AE5A1A1B003AC700F17C6F /* StopsByRouteCall.m in Sources */,
+				49599C70208E4A89004C332D /* StopCall.m in Sources */,
 				49C1B7751B0EEDCA00F109C3 /* RouteTimesView.m in Sources */,
 				49AE5A2D1B00422A00F17C6F /* MBTAStop.m in Sources */,
-				49AE5A241B0041EF00F17C6F /* MBTAMode.m in Sources */,
 				49EAE8A51B13C02B0055A985 /* UIImage+Colorize.m in Sources */,
-				49AE5A321B01689200F17C6F /* MBTAPredictionObject.m in Sources */,
+				49AE5A321B01689200F17C6F /* MBTAPrediction.m in Sources */,
 				49166CC1161F39C00033EF9A /* AppDelegate.m in Sources */,
 				49E856111B00003700E79527 /* MapViewController.m in Sources */,
 				49AE5A2A1B00421B00F17C6F /* MBTATrip.m in Sources */,
+				49599C76208F680E004C332D /* SchedulesByStopCall.m in Sources */,
 				49E8560B1AFFC8DF00E79527 /* Route.m in Sources */,
+				49599C6D208E2261004C332D /* MBTASchedule.m in Sources */,
 				49AE5A101B000D1D00F17C6F /* LineViewController.m in Sources */,
 				49AE5A0B1B0008A600F17C6F /* SchedulesViewController.m in Sources */,
 				491D21471B1695D800472867 /* NagController.m in Sources */,
-				49AE5A271B00420800F17C6F /* MBTADirection.m in Sources */,
 				496968261651DAE800F1B8FC /* AdNavController.m in Sources */,
+				49599C6A208E224B004C332D /* MBTAModel.m in Sources */,
 				49C1B7711B0EEAAB00F109C3 /* StationTableViewCell.m in Sources */,
+				49599C67208E223D004C332D /* MBTAEstimate.m in Sources */,
 				49AE5A201B003FA100F17C6F /* MBTARoute.m in Sources */,
 				49AE5A171B003A2F00F17C6F /* PredictionsByRouteCall.m in Sources */,
 				49E856081AFFC8D000E79527 /* Station.m in Sources */,
 				49EAE8A01B125E700055A985 /* RoutesTimesView.m in Sources */,
 				49AE5A141B00372100F17C6F /* RouteCall.m in Sources */,
+				49599C73208F67D3004C332D /* PredictionsByStopCall.m in Sources */,
+				491C313F20A1E9BE00657A83 /* MBTAShape.m in Sources */,
 				49E855FF1AFFB63100E79527 /* BaseNetworkCall.m in Sources */,
 				49E856021AFFC83C00E79527 /* Line.m in Sources */,
 				49AE5A1D1B003ADB00F17C6F /* SchedulesByRouteCall.m in Sources */,
@@ -787,7 +891,6 @@
 				49C7D9A81B14F7C600B76BF0 /* StopsByRouteCall.m in Sources */,
 				49C7D9AB1B14F7CE00B76BF0 /* BaseNetworkCall.m in Sources */,
 				49C7D9C31B14FF1100B76BF0 /* DummyLineDelegate.m in Sources */,
-				49C7D9C71B15146800B76BF0 /* MBTAPredictionObjectSpec.m in Sources */,
 				49C7D9A71B14F7B700B76BF0 /* SchedulesByRouteCall.m in Sources */,
 				49C7D9AA1B14F7CC00B76BF0 /* RouteCall.m in Sources */,
 			);
@@ -824,8 +927,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -839,6 +944,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "afee3a64-1fe0-4dd7-ba4f-d177e20182e0";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
@@ -853,14 +959,17 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "afee3a64-1fe0-4dd7-ba4f-d177e20182e0";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 arm64 armv7s";
@@ -869,10 +978,15 @@
 		};
 		49166CD1161F39C00033EF9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA649069EC819D5B5FE3232F /* Pods-BostonTMap.debug.xcconfig */;
+			baseConfigurationReference = F2CDADE03934F7D85247684D /* Pods-BostonTMap.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE7EQ66NRS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -884,8 +998,9 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32f00c8d-0c73-4856-80be-e712365e6893";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "32f00c8d-0c73-4856-80be-e712365e6893";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -893,10 +1008,15 @@
 		};
 		49166CD2161F39C00033EF9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9DDC865652C0451BDFB3938 /* Pods-BostonTMap.release.xcconfig */;
+			baseConfigurationReference = 1D158B15E31E337E848B9914 /* Pods-BostonTMap.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PE7EQ66NRS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -907,8 +1027,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "421cf995-454d-4ba1-bdb0-d6336140d053";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "421cf995-454d-4ba1-bdb0-d6336140d053";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -916,7 +1037,7 @@
 		};
 		49AE5A401B016ACA00F17C6F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14DDF3ABEC7CE7CB81A91E29 /* Pods-BostonTMapTests.debug.xcconfig */;
+			baseConfigurationReference = 9CF67F49B16D47E2169F6711 /* Pods-BostonTMapTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -927,6 +1048,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -949,13 +1071,14 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "75c8dfb7-f570-49ec-a5ed-60510550dc1e";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BostonTMap.app/BostonTMap";
 			};
 			name = Debug;
 		};
 		49AE5A411B016ACA00F17C6F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47345B609643DE29E678FC27 /* Pods-BostonTMapTests.release.xcconfig */;
+			baseConfigurationReference = BD5182168049B72349234DF2 /* Pods-BostonTMapTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -966,6 +1089,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Todd Elliot Schrock (RY2U2EZS76)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -985,6 +1109,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "75c8dfb7-f570-49ec-a5ed-60510550dc1e";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BostonTMap.app/BostonTMap";
 			};
 			name = Release;

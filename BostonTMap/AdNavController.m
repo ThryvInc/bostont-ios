@@ -7,11 +7,12 @@
 //
 
 #import "AdNavController.h"
-#import <MoPub/MPAdView.h>
 
-@interface AdNavController ()  <MPAdViewDelegate>
-@property (nonatomic, retain) MPAdView *adView;
+@import GoogleMobileAds;
+
+@interface AdNavController () <GADBannerViewDelegate>
 @property BOOL bannerIsVisible;
+@property (nonatomic, strong) GADBannerView *bannerView;
 @end
 
 static float const AnimationDuration = .1;
@@ -21,44 +22,59 @@ static float const AnimationDuration = .1;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // TODO: Replace this test id with your personal ad unit id
-    MPAdView* adView = [[MPAdView alloc] initWithAdUnitId:@"f34387b7990b4d85976abf940b2ad454"
-                                                     size:MOPUB_BANNER_SIZE];
-    self.adView = adView;
-    self.adView.delegate = self;
-    self.adView.frame = CGRectMake(0, - MOPUB_BANNER_SIZE.height,
-                                   MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
-    [self.view addSubview:self.adView];
-    [self.adView loadAd];
+    
+    self.bannerView = [[GADBannerView alloc]
+                       initWithAdSize:kGADAdSizeBanner];
+    
+    [self addBannerViewToView:self.bannerView];
+    self.bannerView.adUnitID = @"ca-app-pub-2574276621042285/9530012507";
+    self.bannerView.rootViewController = self;
+    self.bannerView.delegate = self;
+    [self.bannerView loadRequest:[GADRequest request]];
+    
     self.bannerIsVisible=NO;
+}
+
+- (void)addBannerViewToView:(UIView *)bannerView {
+    bannerView.translatesAutoresizingMaskIntoConstraints = NO;
+    bannerView.alpha = 0;
+    [self.view addSubview:bannerView];
+    [self.view addConstraints:@[
+                                [NSLayoutConstraint constraintWithItem:bannerView
+                                                             attribute:NSLayoutAttributeBottom
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:self.bottomLayoutGuide
+                                                             attribute:NSLayoutAttributeTop
+                                                            multiplier:1
+                                                              constant:0],
+                                [NSLayoutConstraint constraintWithItem:bannerView
+                                                             attribute:NSLayoutAttributeCenterX
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:self.view
+                                                             attribute:NSLayoutAttributeCenterX
+                                                            multiplier:1
+                                                              constant:0]
+                                ]];
 }
 
 #pragma mark - <MPAdViewDelegate>
 
-- (UIViewController *)viewControllerForPresentingModalView {
-    return self;
-}
-
-- (void)adViewDidLoadAd:(MPAdView *)banner
+- (void)adViewDidReceiveAd:(GADBannerView *)bannerView
 {
     if (!self.bannerIsVisible){
         [UIView animateWithDuration:AnimationDuration animations:^{
-            banner.frame = CGRectOffset(banner.frame, 0, MOPUB_BANNER_SIZE.height
-                                        + self.navigationBar.bounds.size.height
-                                        + [UIApplication sharedApplication].statusBarFrame.size.height);
+            bannerView.alpha = 1;
         }];
         self.bannerIsVisible = YES;
     }
 }
 
-- (void)adViewDidFailToLoadAd:(MPAdView *)banner
+- (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error
 {
     if (self.bannerIsVisible){
         [UIView animateWithDuration:AnimationDuration animations:^{
             // banner is visible and we move it out of the screen, due to connection issue
-            banner.frame = CGRectOffset(banner.frame, 0, -MOPUB_BANNER_SIZE.height
-                                        - self.navigationBar.bounds.size.height
-                                        - [UIApplication sharedApplication].statusBarFrame.size.height);
+            bannerView.alpha = 0;
         }];
         self.bannerIsVisible = NO;
     }

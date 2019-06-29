@@ -18,14 +18,14 @@
 
 - (void)configure
 {
-    self.scheme = @"http";
-    self.host = @"realtime.mbta.com";
-    self.baseRoute = @"/developer/api/v2/";
+    self.scheme = @"https";
+    self.host = @"api-v3.mbta.com";
+    self.baseRoute = @"/";
 }
 
 - (NSURL *)url
 {
-    return [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@%@%@?%@format=json&api_key=%@", self.scheme, self.host, self.baseRoute, self.endpoint, self.getParams, [self getApiKey]]];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@%@%@?%@api_key=%@", self.scheme, self.host, self.baseRoute, self.endpoint, self.getParams, [self getApiKey]]];
 }
 
 - (void)executeWithCompletionBlock:(void(^)(NSData *data, NSURLResponse *response, NSError *error))completionBlock
@@ -49,7 +49,7 @@
 
 - (NSString *)getApiKey
 {
-    return @"rBlHmm4UkU26TEb0wZjwWQ";
+    return @"8dbaee39f9234bf6993aa11fb77c7431";
 }
 
 - (NSDictionary *)dataToJSON:(NSData *)data
@@ -60,6 +60,19 @@
         NSLog(@"%@", e.debugDescription);
     }
     return json;
+}
+
++ (NSString *)timeStringFrom:(NSString *)nowString {
+    if ([nowString hasPrefix:@"00"]) {
+        nowString = [NSString stringWithFormat:@"%@:%@",@"24", [nowString substringFromIndex:3]];
+    }
+    if ([nowString hasPrefix:@"01"]) {
+        nowString = [NSString stringWithFormat:@"%@:%@",@"25", [nowString substringFromIndex:3]];
+    }
+    if ([nowString hasPrefix:@"02"]) {
+        nowString = [NSString stringWithFormat:@"%@:%@",@"26", [nowString substringFromIndex:3]];
+    }
+    return nowString;
 }
 
 @end

@@ -75,20 +75,27 @@ static NSMutableDictionary *imageDictionary;
 
 - (void)setupPredictions
 {
+    self.prediction1ArrowImage.image = nil;
+    self.prediction1Label.text = @"";
+    self.prediction2ArrowImage.image = nil;
+    self.prediction2Label.text = @"";
+    self.nameLabel.alpha = 0;
+    
     for (Prediction *prediction in self.predictions){
         NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"_%@_", prediction.route.routeName.uppercaseString]];
         [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor clearColor] range:NSMakeRange(attributedText.length-1,1)];
         [attributedText addAttribute:NSForegroundColorAttributeName value:[UIColor clearColor] range:NSMakeRange(0,1)];
         self.nameLabel.attributedText = attributedText;
         self.nameLabel.backgroundColor = prediction.route.color;
+        self.nameLabel.alpha = 1;
         
-        if ([prediction.directionName isEqualToString:@"Northbound"] || [prediction.directionName isEqualToString:@"Eastbound"]) {
-            self.prediction1ArrowImage.image = [self imageForRoute:prediction.route direction:prediction.directionName];
+        if ([prediction.directionId intValue] == 1) {
+            self.prediction1ArrowImage.image = [self imageForRoute:prediction.route direction:prediction.directionId];
             
             self.prediction1Label.text = [NSString stringWithFormat:@"%im", prediction.predictionInSeconds / 60];
             [self.prediction1Label sizeToFit];
-        }else if ([prediction.directionName isEqualToString:@"Southbound"] || [prediction.directionName isEqualToString:@"Westbound"]){
-            self.prediction2ArrowImage.image = [self imageForRoute:prediction.route direction:prediction.directionName];
+        }else if ([prediction.directionId intValue] == 0){
+            self.prediction2ArrowImage.image = [self imageForRoute:prediction.route direction:prediction.directionId];
             
             self.prediction2Label.text = [NSString stringWithFormat:@"%im", prediction.predictionInSeconds / 60];
             [self.prediction2Label sizeToFit];
@@ -96,15 +103,15 @@ static NSMutableDictionary *imageDictionary;
     }
 }
 
-- (UIImage *)imageForRoute:(Route *)route direction:(NSString *)direction
+- (UIImage *)imageForRoute:(Route *)route direction:(NSNumber *)direction
 {
     if (imageDictionary[route.color][direction]) {
         return imageDictionary[route.color][direction];
     }else{
         UIImage *image;
-        if ([direction isEqualToString:@"Northbound"] || [direction isEqualToString:@"Eastbound"]) {
+        if ([direction intValue] == 1) {
             image = [UIImage imageNamed:@"arrow_up_white"];
-        }else if ([direction isEqualToString:@"Southbound"] || [direction isEqualToString:@"Westbound"]){
+        }else if ([direction intValue] == 0){
             image = [UIImage imageNamed:@"arrow_down_white"];
         }
         

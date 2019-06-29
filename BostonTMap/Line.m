@@ -10,14 +10,19 @@
 #import "Route.h"
 #import "Prediction.h"
 #import "Station.h"
+#import "MBTAEstimate.h"
+#import "MBTAPrediction.h"
+#import "MBTASchedule.h"
 #import "MBTARoute.h"
-#import "MBTADirection.h"
 #import "MBTATrip.h"
 #import "MBTAStop.h"
-#import <Mantle/Mantle.h>
+#import "MBTAShape.h"
 #import "StopsByRouteCall.h"
 #import "PredictionsByRouteCall.h"
 #import "SchedulesByRouteCall.h"
+#import "JSONAPI.h"
+#import "JSONAPIResourceDescriptor.h"
+#import "NSArray+Reverse.h"
 
 @interface Line ()
 @property (nonatomic) int requestSemaphore;
@@ -26,48 +31,75 @@
 
 @implementation Line
 
-- (void)fetchRoutes
-{
+- (void)fetchRoutes {
     self.errorSemaphore = 0;
-    for (Route *route in self.routes) {
-        [self fetchStopsForRoute:route];
-    }
+    
+    [self setupJsonApiBullshit];
+    
+    [self fetchStations];
 }
 
-- (void)fetchStopsForRoute:(Route *)route
-{
+- (void)setupJsonApiBullshit {
+    [JSONAPIResourceDescriptor addResource:[MBTATrip class]];
+    [JSONAPIResourceDescriptor addResource:[MBTAStop class]];
+    [JSONAPIResourceDescriptor addResource:[MBTARoute class]];
+    [JSONAPIResourceDescriptor addResource:[MBTAShape class]];
+    [JSONAPIResourceDescriptor addResource:[MBTAPrediction class]];
+    [JSONAPIResourceDescriptor addResource:[MBTASchedule class]];
+}
+
+- (void)fetchStations {
+    NSMutableArray *mbtaRouteIds = [NSMutableArray new];
+    for (Route *route in self.routes) {
+        [mbtaRouteIds addObject:route.mbtaRouteId];
+    }
+    
     StopsByRouteCall *call = [[StopsByRouteCall alloc] init];
     [call configure];
-    call.route = route.mbtaRouteId;
+    call.route = [mbtaRouteIds componentsJoinedByString:@","];
     [call executeWithCompletionBlock:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error && response && ((NSHTTPURLResponse *)response).statusCode < 300) {
-            NSDictionary *routeDict = [call dataToJSON:data];
-            NSError *mantleError;
-            MBTARoute *mbtaRoute = [MTLJSONAdapter modelOfClass:[MBTARoute class] fromJSONDictionary:routeDict error:&mantleError];
-            for (MBTADirection *direction in mbtaRoute.directions){
-                [self addStops:direction.stops toStationsInRoute:route withTripName:nil directionName:direction.directionName];
+            NSDictionary *jsonDict = [call dataToJSON:data];
+            JSONAPI *jsonApi = [JSONAPI jsonAPIWithDictionary:jsonDict];
+            NSArray *stops = jsonApi.resources;
+            for (MBTAStop *stop in stops) {
+                Station *station = [Station new];
+                station.stationId = stop.modelId;
+                station.stationName = stop.name;
+                [self.stations addObject:station];
             }
-            if (route.isPredictable) {
-                [self fetchPredictionsForRoute:route];
-            }else{
-                [self fetchSchedulesForRoute:route];
+            if (![self.routes.firstObject.mbtaRouteId hasPrefix:@"Red"]) {
+                self.stations = [[self.stations reversedArray] mutableCopy];
             }
+            [self fetchEstimates];
         }else{
 #warning error
         }
     }];
 }
 
-- (void)fetchPredictionsForRoute:(Route *)route
-{
+- (void)fetchEstimates {
+    for (Route *route in self.routes) {
+        if (route.isPredictable) {
+            [self fetchPredictionsForRoute:route];
+        } else {
+            [self fetchSchedulesForRoute:route];
+        }
+    }
+}
+
+- (void)fetchPredictionsForRoute:(Route *)route {
     self.requestSemaphore++;
     PredictionsByRouteCall *call = [[PredictionsByRouteCall alloc] init];
     [call configure];
     call.route = route.mbtaRouteId;
     [call executeWithCompletionBlock:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error && ((NSHTTPURLResponse *)response).statusCode < 300) {
-            NSDictionary *routeDict = [call dataToJSON:data];
-            [self stopsFromTripsInMbtaRoute:routeDict forRoute:route];
+            NSDictionary *jsonDict = [call dataToJSON:data];
+            JSONAPI *jsonApi = [JSONAPI jsonAPIWithDictionary:jsonDict];
+            NSArray<MBTAEstimate *> *predictions = jsonApi.resources;
+            [self addEstimates:predictions toStations:self.stations];
+            
             self.requestSemaphore--;
             if (!self.requestSemaphore) [self.delegate lineLoaded:self];
         }else{
@@ -84,9 +116,11 @@
     call.route = route.mbtaRouteId;
     [call executeWithCompletionBlock:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error && ((NSHTTPURLResponse *)response).statusCode < 300) {
-            NSLog(@"%li", (long)((NSHTTPURLResponse *)response).statusCode);
-            NSDictionary *routeDict = [call dataToJSON:data];
-            [self stopsFromTripsInMbtaRoute:routeDict forRoute:route];
+            NSDictionary *jsonDict = [call dataToJSON:data];
+            JSONAPI *jsonApi = [JSONAPI jsonAPIWithDictionary:jsonDict];
+            NSArray<MBTAEstimate *> *schedules = jsonApi.resources;
+            [self addEstimates:schedules toStations:self.stations];
+            
             self.requestSemaphore--;
             if (!self.requestSemaphore) [self.delegate lineLoaded:self];
         }else{
@@ -95,64 +129,56 @@
     }];
 }
 
-- (void)stopsFromTripsInMbtaRoute:(NSDictionary *)routeDict forRoute:(Route *)route
-{
-    NSError *mantleError;
-    MBTARoute *mbtaRoute = [MTLJSONAdapter modelOfClass:[MBTARoute class] fromJSONDictionary:routeDict error:&mantleError];
-    for (MBTADirection *direction in mbtaRoute.directions){
-        for (MBTATrip *trip in direction.trips){
-            [self addStops:trip.stops toStationsInRoute:route withTripName:trip.name directionName:direction.directionName];
+- (void)addEstimates:(NSArray<MBTAEstimate *> *)estimates toStations:(NSArray<Station *> *)stations {
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"predictionTime"
+                                                                   ascending:YES];
+    NSArray *sortedEstimates = [estimates sortedArrayUsingDescriptors:@[sortDescriptor]];
+    
+    for (MBTAEstimate *estimate in sortedEstimates) {
+        Station *station = [Station new];
+        station.stationId = estimate.stop.parentStation.modelId;
+        
+        NSUInteger index = [stations indexOfObject:station];
+        if (index != -1 && index < stations.count) {
+            station = stations[index];
+        } else {
+            continue;
         }
-    }
-}
-
-- (void)addStops:(NSArray *)stops toStationsInRoute:(Route *)route withTripName:(NSString *)tripName directionName:(NSString *)directionName
-{
-    for (MBTAStop *stop in stops){
-        Prediction *prediction;
-        if ([stop.prediction intValue]) {
-            if (self.routes.count > 1) {
-                if ([[NSString stringWithFormat:@"%@ ", tripName.lowercaseString] containsString:[NSString stringWithFormat:@" %@ ", route.routeId.lowercaseString]]) {
-                    if ([stop.prediction intValue] > 0) {
-                        prediction = [[Prediction alloc] init];
-                        prediction.predictionInSeconds = [stop.prediction intValue];
-                        prediction.route = route;
-                        prediction.directionName = directionName;
-                    }
-                }
-            }else{
-                if ([stop.prediction intValue] > 0) {
-                    prediction = [[Prediction alloc] init];
-                    prediction.predictionInSeconds = [stop.prediction intValue];
-                    prediction.route = route;
-                    prediction.directionName = directionName;
-                }
+        
+        Prediction *prediction = [Prediction new];
+        prediction.directionId = estimate.trip.directionId;
+        prediction.date = estimate.predictionTime;
+        if ([prediction.directionId intValue] == 1) {
+            if ([station.stationId isEqualToString:@"place-qnctr"]) {
+                NSLog(@"ruh roh");
+            }
+            if ([estimate.trip.shape.name.lowercaseString isEqualToString:@"ashmont"]) {
+                prediction.route = [Route ashmont];
+            } else if ([estimate.trip.shape.name.lowercaseString isEqualToString:@"braintree"]) {
+                prediction.route = [Route braintree];
+            } else {
+                continue;
+//                prediction.route = [Route routeFor:estimate.route.modelId];
+            }
+        } else {
+            Route *route = [Route routeForHeadsign:estimate.trip.headsign];
+            if (route) {
+                prediction.route = route;
+            } else {
+                prediction.route = [Route routeFor:estimate.route.modelId];
             }
         }
         
-        if (stop.parentId && stop.parentName) {
-            Station *station = [[Station alloc] init];
-            station.stationId = stop.parentId;
-            station.stationName = stop.parentName;
-            [station.stops addObject:stop];
-            if ([self.stations containsObject:station]) {
-                Station *originalStation = [self.stations objectAtIndex:[self.stations indexOfObject:station]];
-                if (![originalStation.stops containsObject:stop]) {
-                    [originalStation.stops addObject:stop];
-                    if (prediction) [originalStation addPrediction:prediction];
-                }
-            }else{
-                if (prediction) [station addPrediction:prediction];
-                
-                [self.stations addObject:station];
-            }
-        }else if (prediction){
-            for (Station *station in self.stations){
-                if ([station.stops containsObject:stop]) {
-                    [station addPrediction:prediction];
-                }
-            }
+        if ([estimate.trip.directionId intValue] == 0) {
+            [station.zeroPredictions addObject:prediction];
+        } else if ([estimate.trip.directionId intValue] == 1) {
+            [station.onePredictions addObject:prediction];
         }
+        
+        if (![station.stops containsObject:estimate.stop]) [station.stops addObject:estimate.stop];
+        [station.mbtaPredictions addObject:estimate];
+        
+        [station.predictions addObject:prediction];
     }
 }
 

@@ -6,11 +6,9 @@
 //
 //
 
-#import "MBTAPredictionObject.h"
+#import "MBTAModel.h"
 
-@interface MBTAStop : MBTAPredictionObject
-@property (nonatomic, strong) NSString *stopId;
-@property (nonatomic, strong) NSString *parentName;
-@property (nonatomic, strong) NSString *parentId;
-@property (nonatomic, strong) NSArray *modes;
+@interface MBTAStop : MBTAModel
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) MBTAStop *parentStation;
 @end

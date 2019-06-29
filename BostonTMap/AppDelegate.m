@@ -10,9 +10,11 @@
 #import "Flurry.h"
 #import "MapViewController.h"
 #import "NagController.h"
+#import "AdNavController.h"
 #import <Fabric/Fabric.h>
-#import <MoPub/MoPub.h>
 #import <Crashlytics/Crashlytics.h>
+
+@import GoogleMobileAds;
 
 @interface AppDelegate ()
 @property (nonatomic, strong) NagController *nagger;
@@ -22,11 +24,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Fabric with:@[CrashlyticsKit, MoPubKit]];
+    [Fabric with:@[CrashlyticsKit,]];
     [Flurry startSession:@"R3N3NS36S2BDR4XR4RFD"];
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-2574276621042285~8053279304"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[MapViewController alloc]initWithNibName:@"MapViewController" bundle:nil];
+    
+    MapViewController *mapVC = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    
+    AdNavController *navVC = [[AdNavController alloc] initWithRootViewController:mapVC];
+
+    self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
     
     return YES;

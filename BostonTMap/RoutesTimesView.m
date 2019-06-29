@@ -52,6 +52,11 @@
 {
     _station = station;
     [self setupRoutes];
+    [station refresh:^{
+        if ([_station isEqual:station]) {
+            [self setupRoutes];
+        }
+    }];
 }
 
 - (void)setup
@@ -73,53 +78,39 @@
              constraints:@[self.secondConstraint, self.thirdConstraint, self.fourthConstraint, self.fifthConstraint, self.sixthConstraint]];
 }
 
-- (void)timesForRoutes:(NSArray *)routes routeViews:(NSArray *)routeViews constraints:(NSArray *)constraints
+- (void)timesForRoutes:(NSArray *)routes routeViews:(NSArray<RouteTimesView *> *)routeViews constraints:(NSArray<NSLayoutConstraint *> *)constraints
 {
-    if (routes.count == 0 && ![routeViews containsObject:self.firstRoute]) {
-        for (int i = 0; i<routeViews.count; i++){
-            RouteTimesView *routeView = routeViews[i];
-            NSLayoutConstraint *constraint = constraints[i];
-            routeView.alpha = 0;
-            constraint.constant = -12;
-        }
-        [self updateConstraints];
-        return;
-    }else if (routes.count && routes.count == self.station.routes.count){
-        //first one
-        [self timesForRoute:routes[0] intoRouteView:routeViews[0] constraint:nil];
-        [self timesForRoutes:[self arrayOfRemainingElements:routes]
-                  routeViews:[self arrayOfRemainingElements:routeViews]
-                 constraints:constraints];
-    }else if (routes.count > 0){
-        [self timesForRoute:routes[0] intoRouteView:routeViews[0] constraint:constraints[0]];
-        [self timesForRoutes:[self arrayOfRemainingElements:routes]
-                  routeViews:[self arrayOfRemainingElements:routeViews]
-                 constraints:[self arrayOfRemainingElements:constraints]];
-    }else{
-        self.firstRoute.alpha = 0;
+    routeViews[0].alpha = 0;
+    for (int i = 1; i<routeViews.count; i++){
+        routeViews[i].alpha = 0;
+        constraints[i - 1].constant = -12;
     }
+    
+    if (routes.count > 0) {
+        [self timesForRoute:routes[0] intoRouteView:routeViews[0] constraint:nil];
+        for (int i = 1; i<routes.count; i++){
+            [self timesForRoute:routes[i] intoRouteView:routeViews[i] constraint:constraints[i - 1]];
+        }
+    }
+    
+    [self updateConstraints];
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
 }
 
 - (void)timesForRoute:(Route *)route intoRouteView:(RouteTimesView *)routeView constraint:(NSLayoutConstraint *)constraint
 {
     routeView.alpha = 1;
     constraint.constant = 2;
-    Prediction *prediction1 = [Prediction earliestPredictionInArray:[self.station predictionsForRoute:route]];
-    if (prediction1) {
-        Prediction *prediction2 = [Prediction earliestPredictionInArray:[self.station predictionsForRoute:route] oppositeDirectionOf:prediction1];
-        if (prediction2) {
-            routeView.predictions = @[prediction1, prediction2];
-        }else {
-            routeView.predictions = @[prediction1];
-        }
+    Prediction *prediction1 = [[self.station zeroPredictionsForRoute:route] firstObject];
+    Prediction *prediction2 = [[self.station onePredictionsForRoute:route] firstObject];
+    if (prediction1 && prediction2) {
+        routeView.predictions = @[prediction1, prediction2];
+    } else if (prediction1) {
+        routeView.predictions = @[prediction1];
+    } else if (prediction2) {
+        routeView.predictions = @[prediction2];
     }
-}
-
-- (NSArray *)arrayOfRemainingElements:(NSArray *)array
-{
-    return [array filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
-        return array[0] != evaluatedObject;
-    }]];
 }
 
 @end

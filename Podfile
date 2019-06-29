@@ -3,11 +3,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, "7.0"
 
 target "BostonTMap" do
-    pod 'FlurrySDK'
-    pod 'Mantle'
-    pod 'Google-Mobile-Ads-SDK', '~> 7.0'
+    pod 'Flurry-iOS-SDK/FlurrySDK'
+    pod 'Google-Mobile-Ads-SDK'
     pod 'GPUImage'
     pod 'SBCategories'
+    pod 'JSONAPI'
+    pod 'ISO8601DateFormatter'
 end
 
 target "BostonTMapTests" do
